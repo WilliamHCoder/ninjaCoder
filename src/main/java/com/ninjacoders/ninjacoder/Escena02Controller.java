@@ -12,16 +12,19 @@ import javafx.fxml.FXML;
  *
  * @author williamhernandezleon
  */
-public class Escena01Controller {
+public class Escena02Controller {
 
     /**
      * Initializes the controller class.
      */
     @FXML
-    private void switchToEscena2() throws IOException {
-        App.setRoot("escena02");
+    private void switchToEscena1() throws IOException {
+        App.setRoot("escena01");
     }
     
-  
+    @FXML
+    private void switchToEscena3() throws IOException {
+        App.setRoot("escena03");
+    }
     
 }

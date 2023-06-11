@@ -12,7 +12,7 @@ import javafx.fxml.FXML;
  *
  * @author williamhernandezleon
  */
-public class Escena01Controller {
+public class Escena03Controller {
 
     /**
      * Initializes the controller class.
@@ -22,6 +22,9 @@ public class Escena01Controller {
         App.setRoot("escena02");
     }
     
-  
+    @FXML
+    private void switchToEscena4() throws IOException {
+        App.setRoot("escena01");
+    }
     
 }
