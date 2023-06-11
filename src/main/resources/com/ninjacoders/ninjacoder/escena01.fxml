@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ninjacoders.ninjacoder.Escena01Controller">
+   <children>
+      <ImageView fitHeight="762.0" fitWidth="1280.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/01_ninjaCoder_Escena_1_fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="793.0" fitWidth="1280.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/01_ninjaCoder_Escena_1_logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="88.0" fitWidth="250.0" layoutX="540.0" layoutY="506.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/01_ninjaCoder_Escena_1_btn_iniciar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -22,6 +22,6 @@ public class Escena01Controller {
         App.setRoot("secondary");
     }
     
- 
+  
     
 }
