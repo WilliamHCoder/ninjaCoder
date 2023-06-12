@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -7,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.ninjacoders.ninjacoder.Escena03Controller">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ninjacoders.ninjacoder.Escena03Controller">
    <children>
       <ImageView fitHeight="733.0" fitWidth="1295.0" layoutY="-1.0" preserveRatio="true">
          <image>
@@ -30,17 +30,27 @@
             <Font name="Gill Sans" size="72.0" />
          </font>
       </Label>
-      <ImageView fitHeight="79.0" fitWidth="200.0" layoutX="37.0" layoutY="633.0">
-         <image>
-            <Image url="@../../../src/02_ninjaCoder_Escena_2_btn_atras.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="200.0" layoutX="1069.0" layoutY="633.0">
-         <image>
-            <Image url="@../../../src/02_ninjaCoder_Escena_2_btn_siguiente.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="btnAtrasE03" layoutX="108.0" layoutY="608.0" mnemonicParsing="false" onAction="#switchToEscena2" text="atrás" />
-      <Button fx:id="btnSiguienteE03" layoutX="1132.0" layoutY="608.0" mnemonicParsing="false" onAction="#switchToEscena4" text="siguiente" />
+      <Button fx:id="btnAtrasE03" blendMode="DARKEN" layoutX="23.0" layoutY="629.0" mnemonicParsing="false" onAction="#switchToEscena2">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../src/02_ninjaCoder_Escena_2_btn_atras.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnSiguienteE03" blendMode="DARKEN" layoutX="1065.0" layoutY="629.0" mnemonicParsing="false" onAction="#switchToEscena4">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../src/02_ninjaCoder_Escena_2_btn_siguiente.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
    </children>
 </AnchorPane>
