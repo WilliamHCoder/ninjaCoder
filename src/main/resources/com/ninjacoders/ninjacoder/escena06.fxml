@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ninjacoders.ninjacoder.Escena06Controller">
+   <children>
+      <ImageView fitHeight="726.0" fitWidth="1285.0" layoutY="-1.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/01_ninjaCoder_Escena_1_fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="723.0" fitWidth="1363.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/02_ninjaCoder_Escena_2_logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAtrasE06" layoutX="445.0" layoutY="598.0" mnemonicParsing="false" onAction="#switchToEscena5a" text="volver a jugar" />
+      <Button fx:id="btnSiguienteE06" layoutX="802.0" layoutY="598.0" mnemonicParsing="false" onAction="#switchToEscena4" text="misiones" />
+      <ImageView fitHeight="502.0" fitWidth="1285.0" layoutX="-1.0" layoutY="123.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/06_ninjaCoder_Escena_6_brn_fondo_mision_cumplida.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="232.0" layoutX="726.0" layoutY="627.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/06_ninjaCoder_Escena_6_brn_misiones.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="308.0" layoutX="341.0" layoutY="626.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/06_ninjaCoder_Escena_6_brn_volver_a_jugar.png" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER_RIGHT" layoutX="307.0" layoutY="372.0" prefHeight="135.0" prefWidth="732.0" text="username: 500 + 100">
+         <font>
+            <Font name="Gill Sans" size="74.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

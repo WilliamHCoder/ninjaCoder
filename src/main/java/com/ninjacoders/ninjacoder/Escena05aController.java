@@ -7,34 +7,34 @@ package com.ninjacoders.ninjacoder;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
+import com.ninjacoders.ninjacoder.App;
+import java.io.IOException;
+import javafx.fxml.FXML;
+
 /**
  * FXML Controller class
  *
  * @author williamhernandezleon
  */
-public class Escena04Controller {
+public class Escena05aController {
 
     /**
      * Initializes the controller class.
      */
+    
     @FXML
-    private void switchToEscena3() throws IOException {
-        App.setRoot("escena03");
+    private void switchToEscena06() throws IOException {
+        App.setRoot("escena06");
     }
     
     @FXML
-    private void switchToEscena5a() throws IOException {
-        App.setRoot("escena05a");
+    private void switchToEscena07() throws IOException {
+        App.setRoot("escena07");
     }
     
-    @FXML
-    private void switchToEscena5b() throws IOException {
-        App.setRoot("escena05b");
+        @FXML
+    private void switchToEscena4() throws IOException {
+        App.setRoot("escena04");
     }
     
-    @FXML
-    private void switchToEscena5c() throws IOException {
-        App.setRoot("escena05c");
-    }
-    
-}
+}   

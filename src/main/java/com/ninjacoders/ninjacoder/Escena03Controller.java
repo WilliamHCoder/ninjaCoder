@@ -24,7 +24,7 @@ public class Escena03Controller {
     
     @FXML
     private void switchToEscena4() throws IOException {
-        App.setRoot("escena01");
+        App.setRoot("escena04");
     }
     
 }

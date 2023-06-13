@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ninjacoders.ninjacoder.Escena05cController">
+    <children>
+      <ImageView fitHeight="730.0" fitWidth="1291.0" layoutY="-1.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/01_ninjaCoder_Escena_1_fondo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="430.0" fitWidth="1291.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/05c_ninjaCoder_Escena_5C_mision_personaje.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="726.0" fitWidth="1298.0" layoutX="-7.0" layoutY="-1.0">
+         <image>
+            <Image url="@../../../src/05_ninjaCoder_Escena_5_temporizador.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="20.0" layoutY="542.0" prefHeight="116.0" prefWidth="139.0" text="15">
+         <font>
+            <Font name="Gill Sans" size="64.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="583.0" fitWidth="1011.0" layoutX="227.0" layoutY="167.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/05_ninjaCoder_Escena_5_computador.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="726.0" layoutX="358.0" layoutY="675.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/05_ninjaCoder_Escena_5_manos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="200.0" layoutX="1060.0" layoutY="627.0">
+         <image>
+            <Image url="@../../../src/02_ninjaCoder_Escena_2_btn_atras.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAtrasE05c" layoutX="1183.0" layoutY="600.0" mnemonicParsing="false" onAction="#switchToEscena4" text="atrás" />
+      <ImageView accessibleRole="BUTTON" fitHeight="79.0" fitWidth="227.0" layoutX="1061.0" layoutY="128.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/01_ninjaCoder_Escena_1_btn_iniciar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="180.0" fitWidth="49.0" layoutX="436.0" layoutY="226.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/05b_ninjaCoder_Escena_5B_num_lineas.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="496.0" layoutY="226.0" prefHeight="61.0" prefWidth="565.0" text="argipmsaad">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="496.0" layoutY="345.0" prefHeight="61.0" prefWidth="565.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="68.0" fitWidth="61.0" layoutX="361.0" layoutY="345.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../src/05b_ninjaCoder_Escena_5B_reloj.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnGanaTemp5c" layoutX="1183.0" layoutY="214.0" mnemonicParsing="false" onAction="#switchToEscena06" text="gana" />
+      <Button fx:id="btnPierdeTemp5c" layoutX="1179.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchToEscena07" text="pierde" />
+   </children>
+</AnchorPane>
