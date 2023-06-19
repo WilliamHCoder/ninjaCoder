@@ -1,0 +1,44 @@
+.btn-general{
+    -fx-background-color: #CE0F0F;
+/*        linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);*/
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 30;
+    -fx-padding: 8 30 8 30;
+    -fx-text-fill: #fff;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+    -fx-border: solid outside;
+    -fx-border-color: #fff;
+    -fx-border-width: 2;
+    -fx-border-radius: 30;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 3, 0);
+    -fx-cursor: hand;
+    }
+.btn-general:hover{
+    -fx-background-color: #961414;
+    }
+.timer-label{
+    -fx-text-fill: #CE0F0F;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 100px;
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    }
+.input-nickname{
+    -fx-text-fill: #961414;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 38px;
+    -fx-text-alignment: center;
+}
+.btn-mision{
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-cursor: hand;
+    }
+.btn-mision:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 3, 0);
+    }
