@@ -17,12 +17,7 @@
             <Image url="@../../../src/02_ninjaCoder_Escena_2_logo.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="200.0" layoutX="547.0" layoutY="631.0">
-         <image>
-            <Image url="@../../../src/02_ninjaCoder_Escena_2_btn_atras.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="btnAtrasE04" layoutX="753.0" layoutY="658.0" mnemonicParsing="false" onAction="#switchToEscena3" text="atrás" />
+      <Button fx:id="btnAtrasE04" layoutX="575.0" layoutY="640.0" mnemonicParsing="false" onAction="#switchToEscena3" styleClass="btn-general" stylesheets="@../../../src/styles.css" text="atrás" />
       <ImageView fitHeight="560.0" fitWidth="399.0" layoutX="36.0" layoutY="140.0" preserveRatio="true">
          <image>
             <Image url="@../../../src/04_ninjaCoder_Escena_3_mision1.png" />
@@ -38,8 +33,8 @@
             <Image url="@../../../src/04_ninjaCoder_Escena_3_mision3.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnMision1" layoutX="196.0" layoutY="588.0" mnemonicParsing="false" onAction="#switchToEscena5a" text="mision1" />
-      <Button fx:id="btnMision2" layoutX="611.0" layoutY="588.0" mnemonicParsing="false" onAction="#switchToEscena5b" text="mision2" />
-      <Button fx:id="btnMision3" layoutX="1025.0" layoutY="588.0" mnemonicParsing="false" onAction="#switchToEscena5c" text="mision3" />
+      <Button fx:id="btnMision1" layoutX="49.0" layoutY="152.0" mnemonicParsing="false" onAction="#switchToEscena5a" prefHeight="425.0" prefWidth="363.0" styleClass="btn-mision" stylesheets="@../../../src/styles.css" text="mision1" />
+      <Button fx:id="btnMision2" layoutX="461.0" layoutY="152.0" mnemonicParsing="false" onAction="#switchToEscena5b" prefHeight="425.0" prefWidth="363.0" styleClass="btn-mision" stylesheets="@../../../src/styles.css" text="mision2" />
+      <Button fx:id="btnMision3" layoutX="869.0" layoutY="152.0" mnemonicParsing="false" onAction="#switchToEscena5c" prefHeight="425.0" prefWidth="363.0" styleClass="btn-mision" stylesheets="@../../../src/styles.css" text="mision3" />
    </children>
 </AnchorPane>

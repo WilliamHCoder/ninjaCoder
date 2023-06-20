@@ -9,7 +9,9 @@ import javafx.fxml.FXML;
 
 import com.ninjacoders.ninjacoder.App;
 import java.io.IOException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -21,6 +23,14 @@ public class Escena05cController {
     /**
      * Initializes the controller class.
      */
+    @FXML
+    private Label tiempo5c;
+
+    @FXML
+    void iniciarJuego(ActionEvent event) {
+        Mision mision = new Mision(30);
+        mision.temporizador(tiempo5c);
+    } 
     
     @FXML
     private void switchToEscena06() throws IOException {

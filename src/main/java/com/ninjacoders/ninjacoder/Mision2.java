@@ -15,10 +15,18 @@ public class Mision2 extends Mision{
     private Integer misionId;
 
     // constructor
-    public Mision2(String Palabracondicion, Integer misionId) {
+    public Mision2(String Palabracondicion, Integer misionId, Integer tiempoInicial) {
+        super(tiempoInicial);
         this.Palabracondicion = Palabracondicion;
         this.misionId = misionId;
     }
+
+    public Mision2(String Palabracondicion, Integer misionId, String lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
+        super(lineaJugador, lineasCorrectas, lineasErradas, tiempoInicial, tiempoActivo, juegoActivo);
+        this.Palabracondicion = Palabracondicion;
+        this.misionId = misionId;
+    }
+
 
     // métodos getter and setter
     public String getPalabracondicion() {

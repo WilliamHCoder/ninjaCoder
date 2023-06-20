@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -24,11 +25,6 @@
             <Image url="@../../../src/05_ninjaCoder_Escena_5_temporizador.png" />
          </image>
       </ImageView>
-      <TextField layoutX="34.0" layoutY="543.0" prefHeight="116.0" prefWidth="145.0" text="59">
-         <font>
-            <Font name="Gill Sans" size="64.0" />
-         </font>
-      </TextField>
       <ImageView fitHeight="583.0" fitWidth="1011.0" layoutX="227.0" layoutY="168.0" preserveRatio="true">
          <image>
             <Image url="@../../../src/05_ninjaCoder_Escena_5_computador.png" />
@@ -39,17 +35,7 @@
             <Image url="@../../../src/05_ninjaCoder_Escena_5_manos.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="200.0" layoutX="1060.0" layoutY="628.0">
-         <image>
-            <Image url="@../../../src/02_ninjaCoder_Escena_2_btn_atras.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="btnAtrasE05a" layoutX="1183.0" layoutY="601.0" mnemonicParsing="false" onAction="#switchToEscena4" text="atrás" />
-      <ImageView accessibleRole="BUTTON" fitHeight="79.0" fitWidth="227.0" layoutX="1061.0" layoutY="129.0" preserveRatio="true">
-         <image>
-            <Image url="@../../../src/01_ninjaCoder_Escena_1_btn_iniciar.png" />
-         </image>
-      </ImageView>
+      <Button fx:id="btnAtrasE05a" layoutX="1123.0" layoutY="638.0" mnemonicParsing="false" onAction="#switchToEscena4" styleClass="btn-general" stylesheets="@../../../src/styles.css" text="atrás" />
       <ImageView fitHeight="372.0" fitWidth="49.0" layoutX="433.0" layoutY="229.0" preserveRatio="true">
          <image>
             <Image url="@../../../src/05_ninjaCoder_Escena_5_num_lineas.png" />
@@ -95,7 +81,13 @@
             <Font size="32.0" />
          </font>
       </TextField>
-      <Button fx:id="btnGanaTemp5a" layoutX="1193.0" layoutY="224.0" mnemonicParsing="false" onAction="#switchToEscena06" text="gana" />
-      <Button fx:id="btnPierdeTemp5a" layoutX="1189.0" layoutY="262.0" mnemonicParsing="false" onAction="#switchToEscena07" text="pierde" />
+      <Button fx:id="btnGanaTemp5a" layoutX="1187.0" layoutY="296.0" mnemonicParsing="false" onAction="#switchToEscena06" text="gana" />
+      <Button fx:id="btnPierdeTemp5a" layoutX="1183.0" layoutY="334.0" mnemonicParsing="false" onAction="#switchToEscena07" text="pierde" />
+      <Label fx:id="tiempo5a" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="540.0" prefHeight="116.0" prefWidth="145.0" styleClass="timer-label" stylesheets="@../../../src/styles.css" text="60" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Gill Sans" size="80.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnIniciar5a" layoutX="1084.0" layoutY="143.0" mnemonicParsing="false" onAction="#iniciarJuego" prefWidth="160.0" styleClass="btn-general" stylesheets="@../../../src/styles.css" text="iniciar" />
    </children>
 </AnchorPane>

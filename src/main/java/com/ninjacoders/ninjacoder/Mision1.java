@@ -15,10 +15,12 @@ public class Mision1 extends Mision{
     private Integer misionId;
 
     // constructor
-    public Mision1(String condiciones, Integer misionId) {
+    public Mision1(String condiciones, Integer misionId, String lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
+        super(lineaJugador, lineasCorrectas, lineasErradas, tiempoInicial, tiempoActivo, juegoActivo);
         this.condiciones = condiciones;
         this.misionId = misionId;
     }
+    
 
     // métodos getter and setter
     public String getCondiciones() {

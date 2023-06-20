@@ -16,10 +16,18 @@ public class Mision3 extends Mision{
     private Integer misionId;
     
     // constructor
-    public Mision3(ArrayList listaPalabras, Integer misionId) {
+    public Mision3(ArrayList listaPalabras, Integer misionId, Integer tiempoInicial) {
+        super(tiempoInicial);
         this.listaPalabras = listaPalabras;
         this.misionId = misionId;
     }
+
+    public Mision3(ArrayList listaPalabras, Integer misionId, String lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
+        super(lineaJugador, lineasCorrectas, lineasErradas, tiempoInicial, tiempoActivo, juegoActivo);
+        this.listaPalabras = listaPalabras;
+        this.misionId = misionId;
+    }
+
 
     // métodos getter and setter
     public ArrayList getListaPalabras() {
