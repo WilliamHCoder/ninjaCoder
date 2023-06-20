@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,12 +17,20 @@
          <image>
             <Image url="@../../../src/01_ninjaCoder_Escena_1_logo.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
       </ImageView>
-      <ImageView accessibleRole="BUTTON" fitHeight="88.0" fitWidth="250.0" layoutX="540.0" layoutY="506.0" preserveRatio="true">
-         <image>
-            <Image url="@../../../src/01_ninjaCoder_Escena_1_btn_iniciar.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="btnIniciar" layoutX="621.0" layoutY="611.0" mnemonicParsing="false" onAction="#switchToEscena2" text="Iniciar" />
+      <Button fx:id="btnIniciar" blendMode="DARKEN" contentDisplay="GRAPHIC_ONLY" layoutX="571.0" layoutY="567.0" onAction="#switchToEscena2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView blendMode="DARKEN" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../src/01_ninjaCoder_Escena_1_btn_iniciar.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
 </AnchorPane>
