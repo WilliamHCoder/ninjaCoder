@@ -4,6 +4,8 @@
  */
 package com.ninjacoders.ninjacoder;
 
+import javafx.scene.control.TextField;
+
 /**
  *
  * @author williamhernandezleon
@@ -12,15 +14,20 @@ package com.ninjacoders.ninjacoder;
 public class Mision1 extends Mision{
     // atributos de la misión 1
     private String condiciones;
-    private Integer misionId;
+    private Integer misionId = 1;
 
     // constructor
-    public Mision1(String condiciones, Integer misionId, String lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
+    public Mision1(String condiciones, Integer misionId, TextField lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
         super(lineaJugador, lineasCorrectas, lineasErradas, tiempoInicial, tiempoActivo, juegoActivo);
         this.condiciones = condiciones;
         this.misionId = misionId;
     }
-    
+
+    public Mision1(Integer misionId, TextField lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
+        super(lineaJugador, lineasCorrectas, lineasErradas, juegoActivo);
+        this.misionId = misionId;
+    }
+
 
     // métodos getter and setter
     public String getCondiciones() {
@@ -40,5 +47,6 @@ public class Mision1 extends Mision{
     public void crearCondAleatorias(){
 
     }
+    
     
 }

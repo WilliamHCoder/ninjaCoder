@@ -27,6 +27,14 @@
     -fx-background-color: transparent;
     -fx-border-color: none;
     }
+.coding-label{
+    -fx-text-fill: #fff;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 40px;
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    }
 .input-nickname{
     -fx-text-fill: #961414;
     -fx-font-family: "Verdana";
@@ -42,3 +50,4 @@
 .btn-mision:hover{
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 3, 0);
     }
+    
