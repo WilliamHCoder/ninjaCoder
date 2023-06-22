@@ -17,6 +17,6 @@
             <Image url="@../../../src/01_ninjaCoder_Escena_1_logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnIniciar" layoutX="569.0" layoutY="520.0" mnemonicParsing="false" onAction="#switchToEscena2" styleClass="btn-general" stylesheets="@../../../src/styles.css" text="Iniciar" />
+      <Button fx:id="btnIniciar" layoutX="569.0" layoutY="520.0" mnemonicParsing="false" onAction="#switchToEscena2" styleClass="btn-general" stylesheets="@../../../src/styles.css" text="iniciar" />
    </children>
 </AnchorPane>

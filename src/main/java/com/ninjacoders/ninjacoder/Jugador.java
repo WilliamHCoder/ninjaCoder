@@ -9,10 +9,10 @@ package com.ninjacoders.ninjacoder;
  */
 public class Jugador {
     // atributos del Jugador
-    private String nickname;
-    private Integer tonoPiel;
-    private Integer colorOjos;
-    private Integer puntuacion;
+    public String nickname = "";
+    private Integer tonoPiel = 0;
+    private Integer colorOjos = 0;
+    private Integer puntuacion = 0;
 
     // constructor
     public Jugador(String nickname, Integer tonoPiel, Integer colorOjos, Integer puntuacion) {
@@ -22,6 +22,12 @@ public class Jugador {
         this.puntuacion = puntuacion;
     }
 
+    public Jugador(String nickname, Integer tonoPiel, Integer colorOjos) {
+        this.nickname = nickname;
+        this.tonoPiel = tonoPiel;
+        this.colorOjos = colorOjos;
+    }
+    
     // métodos getter y setter
     public Integer getPuntuacion() {
         return puntuacion;

@@ -4,11 +4,13 @@
  */
 package com.ninjacoders.ninjacoder;
 
-import  java.util.Timer; 
-import  java.util.TimerTask;
+import java.io.IOException;
+import java.util.Timer; 
+import java.util.TimerTask;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 /**
@@ -18,7 +20,6 @@ import javafx.scene.control.TextField;
 // La clase Mision será la clase padre para cada una de las 3 misiones del juego
 public class Mision {
     // atributos generales de la misión
-    private TextField lineaJugador;
     private Integer lineasCorrectas;
     private Integer lineasErradas;
     private Integer tiempoInicial;
@@ -30,30 +31,25 @@ public class Mision {
         this.tiempoInicial = tiempoInicial;
     }
 
-    public Mision(TextField lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
-        this.lineaJugador = lineaJugador;
+    public Mision(Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo) {
         this.lineasCorrectas = lineasCorrectas;
         this.lineasErradas = lineasErradas;
         this.tiempoInicial = tiempoInicial;
         this.tiempoActivo = tiempoActivo;
-        this.juegoActivo = juegoActivo;
     }
 
-    public Mision(TextField lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
-        this.lineaJugador = lineaJugador;
+    public Mision(Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
         this.lineasCorrectas = lineasCorrectas;
         this.lineasErradas = lineasErradas;
         this.juegoActivo = juegoActivo;
     }
+
+    //Constructor vacio para condiciones
+    public Mision() {
+    }
     
     
     // métodos getter y setter
-    public TextField getLineaJugador() {
-        return lineaJugador;
-    }
-    public void setLineaJugador(TextField lineaJugador) {
-        this.lineaJugador = lineaJugador;
-    }
     public Integer getLineasCorrectas() {
         return lineasCorrectas;
     }
@@ -102,36 +98,62 @@ public class Mision {
 
     }    
     
-    // Método para mostrar ejecutar el temporizador en las diferentes misiones.
-    public void temporizador(Label label){
+    // Método para mostrar ejecutar el TEMPORIZADOR en las diferentes misiones.
+    public void temporizador(Label label, TextField linea1, TextField linea2, TextField linea3, TextField linea4, TextField linea5, TextField linea6){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
-            int tiempoRestante = tiempoInicial;
-            @Override
-            public void run() {
-                if (tiempoRestante > 0) {
-                    setJuegoActivo(true);
-                    tiempoRestante--; //Disminuye en 1 seg.
-                    Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
-                } else {
-                    timer.cancel(); //Detiene el temporizador
-                    setJuegoActivo(false);
-                }
+        int tiempoRestante = tiempoInicial;
+        @Override
+        public void run() {
+            setJuegoActivo(true);
+            if (tiempoRestante > 0) {
+                tiempoRestante--; //Disminuye en 1 seg.
+                Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
+            } else {
+                timer.cancel(); //Detiene el temporizador
+                setJuegoActivo(false);
+                linea1.setEditable(false);
+                linea2.setEditable(false);
+                linea3.setEditable(false);
+                linea4.setEditable(false);
+                linea5.setEditable(false);
+                linea6.setEditable(false);
             }
+        }
         };
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
-    }   
+    }
     
-    //Habilita la opción de ver los inputs al iniciar el juego
-    public void habilitarInput(TextField field, Boolean lineaActiva, Boolean juegoActivo){
-        if (lineaActiva == true && juegoActivo == true){
+    public void temporizadorSencillo(Label label){
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+        int tiempoRestante = tiempoInicial;
+        @Override
+        public void run() {
+            setJuegoActivo(true);
+            if (tiempoRestante > 0) {
+                tiempoRestante--; //Disminuye en 1 seg.
+                Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
+            } else {
+                timer.cancel(); //Detiene el temporizador
+                setJuegoActivo(false);
+            }
+        }
+        };
+        timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
+    }    
+    
+    
+    //HABILITA la opción de ver los INPUTS al iniciar el juego
+    public void habilitarInput(TextField field, Boolean lineaActiva){
+        if (lineaActiva == true){
             field.setVisible(true);
         }else{
             field.setEditable(false);
         }
     }
     
-    //Limita el máximo de caracteres de la línea de codigo
+    //LIMITA el MÁXIMO de CARACTERES de la línea de código
     public void addTextLimit(final TextField field, final int maxLength) {
         field.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -143,7 +165,7 @@ public class Mision {
             }
         });
     }
-    
+       
     public void validarLineas(){
 
     }    
@@ -151,5 +173,6 @@ public class Mision {
     public void guardarPuntaje(){
 
     }
+   
     
 }

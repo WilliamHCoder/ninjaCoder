@@ -19,12 +19,12 @@
             <Image url="@../../../src/03_ninjaCoder_Escena_3_personaje.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="110.0" layoutY="61.0" prefHeight="109.0" prefWidth="520.0" text="TODO LISTO" textFill="#f8f6f6" wrapText="true">
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="110.0" layoutY="61.0" prefHeight="109.0" prefWidth="520.0" styleClass="texto-bienvenida" stylesheets="@../../../src/styles.css" text="!TODO LISTO" textFill="#f8f6f6" wrapText="true">
          <font>
             <Font name="Gill Sans" size="72.0" />
          </font>
       </Label>
-      <Label contentDisplay="RIGHT" layoutX="669.0" layoutY="61.0" prefHeight="109.0" prefWidth="520.0" text="USERNAME" textFill="#9cda51" wrapText="true">
+      <Label fx:id="nickname3" contentDisplay="RIGHT" layoutX="669.0" layoutY="61.0" prefHeight="109.0" prefWidth="520.0" styleClass="texto-nickname" stylesheets="@../../../src/styles.css" text="nickName!" textFill="#9cda51" wrapText="true">
          <font>
             <Font name="Gill Sans" size="72.0" />
          </font>

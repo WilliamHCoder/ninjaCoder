@@ -29,7 +29,7 @@ public class Escena05bController {
     @FXML
     void iniciarJuego(ActionEvent event) {
         Mision mision = new Mision(5);
-        mision.temporizador(tiempo5b);
+        mision.temporizadorSencillo(tiempo5b);
     } 
     
     @FXML

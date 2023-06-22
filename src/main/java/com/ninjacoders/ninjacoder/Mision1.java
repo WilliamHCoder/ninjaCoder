@@ -4,6 +4,7 @@
  */
 package com.ninjacoders.ninjacoder;
 
+import java.util.ArrayList;
 import javafx.scene.control.TextField;
 
 /**
@@ -13,27 +14,20 @@ import javafx.scene.control.TextField;
 // Hacemos uso de la herencia y llamamos los atributos y métodos de la clase mision
 public class Mision1 extends Mision{
     // atributos de la misión 1
-    private String condiciones;
+    private ArrayList condiciones;
     private Integer misionId = 1;
 
     // constructor
-    public Mision1(String condiciones, Integer misionId, TextField lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
-        super(lineaJugador, lineasCorrectas, lineasErradas, tiempoInicial, tiempoActivo, juegoActivo);
-        this.condiciones = condiciones;
+    public Mision1(Integer misionId, Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
+        super(lineasCorrectas, lineasErradas, juegoActivo);
         this.misionId = misionId;
     }
-
-    public Mision1(Integer misionId, TextField lineaJugador, Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
-        super(lineaJugador, lineasCorrectas, lineasErradas, juegoActivo);
-        this.misionId = misionId;
-    }
-
 
     // métodos getter and setter
-    public String getCondiciones() {
+    public ArrayList getCondiciones() {
         return condiciones;
     }
-    public void setCondiciones(String condiciones) {
+    public void setCondiciones(ArrayList condiciones) {
         this.condiciones = condiciones;
     }
     public Integer getMisionId() {
@@ -44,9 +38,6 @@ public class Mision1 extends Mision{
     }
     
     // otros métodos
-    public void crearCondAleatorias(){
-
-    }
     
     
 }

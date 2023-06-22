@@ -27,6 +27,14 @@
     -fx-background-color: transparent;
     -fx-border-color: none;
     }
+.puntaje-local-label{
+    -fx-text-fill: #ECD81E;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 50px;
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    }
 .coding-label{
     -fx-text-fill: #fff;
     -fx-font-family: "Verdana";
@@ -39,8 +47,23 @@
     -fx-text-fill: #961414;
     -fx-font-family: "Verdana";
     -fx-font-weight: Bold;
-    -fx-font-size: 38px;
+    -fx-font-size: 37px;
     -fx-text-alignment: center;
+    -fx-background-color: #fff;
+}
+.texto-bienvenida{
+    -fx-text-fill: #fff;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 60px;
+    -fx-text-alignment: right;
+}
+.texto-nickname{
+    -fx-text-fill: #9cda51;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 60px;
+    -fx-text-alignment: left;
 }
 .btn-mision{
     -fx-background-color: transparent;

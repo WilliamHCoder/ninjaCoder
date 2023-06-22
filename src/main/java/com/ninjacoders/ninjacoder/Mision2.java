@@ -4,6 +4,12 @@
  */
 package com.ninjacoders.ninjacoder;
 
+import java.util.Timer;
+import java.util.TimerTask;
+import javafx.application.Platform;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
 /**
  *
  * @author williamhernandezleon
@@ -40,6 +46,6 @@ public class Mision2 extends Mision{
     public void elegirPalabCondAleat(){
 
     }
-    
+
     
 }
