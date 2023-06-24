@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -28,38 +29,49 @@
             <Image url="@../../../src/02_ninjaCoder_Escena_2_input_nickname.png" />
          </image>
       </ImageView>
-      <ImageView layoutX="818.0" layoutY="386.0">
-         <image>
-            <Image url="@../../../src/02_ninjaCoder_Escena_2_tono_piel_1.png" />
-         </image>
-      </ImageView>
-      <ImageView layoutX="908.0" layoutY="386.0">
+      <ImageView fx:id="piel2" layoutX="908.0" layoutY="386.0">
          <image>
             <Image url="@../../../src/02_ninjaCoder_Escena_2_tono_piel_2.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <ImageView layoutX="994.0" layoutY="386.0">
+      <ImageView fx:id="piel3" layoutX="994.0" layoutY="386.0">
          <image>
             <Image url="@../../../src/02_ninjaCoder_Escena_2_tono_piel_3.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <ImageView layoutX="818.0" layoutY="479.0">
+      <ImageView fx:id="ojos1" layoutX="818.0" layoutY="479.0">
          <image>
             <Image url="@../../../src/02_ninjaCoder_Escena_2_color_ojos_1.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <ImageView layoutX="908.0" layoutY="479.0">
+      <ImageView fx:id="ojos2" layoutX="908.0" layoutY="479.0">
          <image>
             <Image url="@../../../src/02_ninjaCoder_Escena_2_color_ojos_2.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <ImageView layoutX="994.0" layoutY="479.0">
+      <ImageView fx:id="ojos3" layoutX="994.0" layoutY="479.0">
          <image>
             <Image url="@../../../src/02_ninjaCoder_Escena_2_color_ojos_3.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
       <Button fx:id="btnAtrasE02" layoutX="37.0" layoutY="633.0" mnemonicParsing="false" onAction="#switchToEscena1" styleClass="btn-general" stylesheets="@../../../src/styles.css" text="atrás" />
       <Button fx:id="btnSiguienteE02" layoutX="1049.0" layoutY="633.0" mnemonicParsing="false" onAction="#switchToEscena3" styleClass="btn-general" stylesheets="@../../../src/styles.css" text="siguiente" />
       <TextField fx:id="nickname2" alignment="CENTER" layoutX="279.0" layoutY="268.0" prefHeight="65.0" prefWidth="700.0" promptText="ingresa tu nickname" styleClass="input-nickname" stylesheets="@../../../src/styles.css" />
+      <Button fx:id="piel1" alignment="CENTER" layoutX="819.0" layoutY="387.0" mnemonicParsing="false" onAction="#selColorPiel1" styleClass="btn-piel1" stylesheets="@../../../src/styles.css" text="P1" />
    </children>
 </AnchorPane>

@@ -164,6 +164,51 @@
             </ImageView>
          </children>
       </Pane>
+      <ImageView fx:id="pers5a_1_1" fitHeight="335.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_1_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_1_2" fitHeight="327.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_1_2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_1_3" fitHeight="327.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_1_3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_2_1" fitHeight="336.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_2_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_2_2" fitHeight="337.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_2_2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_2_3" fitHeight="360.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_2_3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_3_1" fitHeight="372.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_3_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_3_2" fitHeight="348.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_3_2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pers5a_3_3" fitHeight="334.0" fitWidth="311.0" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_3_3.png" />
+         </image>
+      </ImageView>
       <Label fx:id="puntaje5a" contentDisplay="CENTER" layoutX="115.0" layoutY="280.0" prefHeight="42.0" prefWidth="179.0" styleClass="puntaje-local-label" stylesheets="@../../../src/styles.css" text="• 0" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Gill Sans" size="80.0" />

@@ -5,8 +5,11 @@
 package com.ninjacoders.ninjacoder;
 
 import java.io.IOException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -21,11 +24,23 @@ public class Escena02Controller {
      //Variables de los elementos de la interfaz
     public TextField nickname2;    
     public String nombreLabel;
+    public Button piel1;
+    public ImageView piel2, piel3, ojos1, ojos2, ojos3;
     
     void crearJugador(String nombre, Jugador jugador){
         jugador.setNickname(nombre);
         jugador.setColorOjos(0);
         jugador.setTonoPiel(0);
+    }
+    
+    //Seleccion de tonos de piel
+    @FXML
+    void selColorPiel(ActionEvent event) {
+        System.out.println("Piel 1 seleccionada");
+        piel1.setOpacity(1);
+        piel2.setOpacity(0.5);
+        piel3.setOpacity(0.5);
+//        Jugador.setTonoPiel(1);
     }
     
     @FXML

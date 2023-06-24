@@ -73,4 +73,19 @@
 .btn-mision:hover{
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 3, 0);
     }
-    
+.btn-piel1{
+    -fx-background-color: #c69c6d;
+    -fx-text-fill: #c69c6d;
+    -fx-background-radius: 50;
+    -fx-padding: 2 5 2 5;
+    -fx-font-size: 45px;
+    -fx-border: solid outside;
+    -fx-border-color: #fff;
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-cursor: hand;
+    }
+.btn-piel1:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 3, 0);
+    }
+
