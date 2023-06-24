@@ -16,7 +16,7 @@ import javafx.scene.image.ImageView;
  *
  * @author williamhernandezleon
  */
-public class Escena02Controller {
+public class Escena02Controller{
 
     /**
      * Initializes the controller class.
@@ -35,7 +35,7 @@ public class Escena02Controller {
     
     //Seleccion de tonos de piel
     @FXML
-    void selColorPiel(ActionEvent event) {
+    void selColorPiel1(ActionEvent event) {
         System.out.println("Piel 1 seleccionada");
         piel1.setOpacity(1);
         piel2.setOpacity(0.5);
