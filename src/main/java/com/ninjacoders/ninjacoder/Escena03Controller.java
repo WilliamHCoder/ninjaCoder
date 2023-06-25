@@ -7,6 +7,7 @@ package com.ninjacoders.ninjacoder;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -18,14 +19,15 @@ public class Escena03Controller {
     /**
      * Initializes the controller class.
      */
-    
     public Label nickname3;
-
+    public ImageView personaje_1_1, personaje_1_2, personaje_1_3, personaje_2_1, personaje_2_2, personaje_2_3, personaje_3_1, personaje_3_2, personaje_3_3;
+    public Escena02Controller escena02 = new Escena02Controller();
+    
     @FXML
-    protected void initialize() {
-//        Jugador jugador = new Jugador(nickname, );
-//        nickname3.setText(jugador.getNickname());  
-        System.out.println("");
+    protected void initialize() {        
+        nickname3.setText(escena02.jugAct.getNickname()+"!"); //Carga el nombre ingresado y lo muestra
+        //Carga el los colores de piel y ojos seleccionados y actualiza la imagen de acuerdo a ellos
+        escena02.cargarImgPersonaje(escena02.jugAct.getTonoPiel(), escena02.jugAct.getColorOjos(), personaje_1_1, personaje_1_2, personaje_1_3, personaje_2_1, personaje_2_2, personaje_2_3, personaje_3_1, personaje_3_2, personaje_3_3);
     }
     
     @FXML

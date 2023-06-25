@@ -13,7 +13,7 @@ public class Jugador {
     private Integer tonoPiel = 0;
     private Integer colorOjos = 0;
     private Integer puntuacion = 0;
-
+    
     // constructor
     public Jugador(String nickname, Integer tonoPiel, Integer colorOjos, Integer puntuacion) {
         this.nickname = nickname;
@@ -22,11 +22,9 @@ public class Jugador {
         this.puntuacion = puntuacion;
     }
 
-    public Jugador(String nickname, Integer tonoPiel, Integer colorOjos) {
-        this.nickname = nickname;
-        this.tonoPiel = tonoPiel;
-        this.colorOjos = colorOjos;
+    public Jugador() {
     }
+    
     
     // métodos getter y setter
     public Integer getPuntuacion() {

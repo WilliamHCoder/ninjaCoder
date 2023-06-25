@@ -24,23 +24,74 @@ public class Escena02Controller{
      //Variables de los elementos de la interfaz
     public TextField nickname2;    
     public String nombreLabel;
-    public Button piel1;
-    public ImageView piel2, piel3, ojos1, ojos2, ojos3;
-    
-    void crearJugador(String nombre, Jugador jugador){
-        jugador.setNickname(nombre);
-        jugador.setColorOjos(0);
-        jugador.setTonoPiel(0);
-    }
-    
+    public Button piel1, piel2, piel3, ojos1, ojos2, ojos3;
+    public static Jugador jugAct = new Jugador("", 0, 0, 0);
+
     //Seleccion de tonos de piel
     @FXML
     void selColorPiel1(ActionEvent event) {
-        System.out.println("Piel 1 seleccionada");
-        piel1.setOpacity(1);
-        piel2.setOpacity(0.5);
-        piel3.setOpacity(0.5);
-//        Jugador.setTonoPiel(1);
+        selColorGen(piel1, piel2, piel3);
+        jugAct.setTonoPiel(1); 
+    }
+
+    @FXML
+    void selColorPiel2(ActionEvent event) {
+        selColorGen(piel2, piel1, piel3);
+        jugAct.setTonoPiel(2); 
+    }
+    
+    @FXML
+    void selColorPiel3(ActionEvent event) {
+        selColorGen(piel3, piel1, piel2);
+        jugAct.setTonoPiel(3); 
+    }
+    
+    //Seleccion de tonos de ojos
+    @FXML
+    void selColorOjos1(ActionEvent event) {
+        selColorGen(ojos1, ojos2, ojos3);
+        jugAct.setColorOjos(1); 
+    }
+
+    @FXML
+    void selColorOjos2(ActionEvent event) {
+        selColorGen(ojos2, ojos1, ojos3);
+        jugAct.setColorOjos(2); 
+    }
+    
+    @FXML
+    void selColorOjos3(ActionEvent event) {
+        selColorGen(ojos3, ojos1, ojos2);
+        jugAct.setColorOjos(3); 
+    }
+    
+    //Método para modificar opacidad de los botones no seleccionados
+    void selColorGen(Button btnPrinc, Button btnSec, Button btnTerc){
+        btnPrinc.setOpacity(1);
+        btnSec.setOpacity(0.3);
+        btnTerc.setOpacity(0.3);
+    }
+    
+    void cargarImgPersonaje(int piel, int ojos, ImageView imagen1, ImageView imagen2, ImageView imagen3, ImageView imagen4, ImageView imagen5, ImageView imagen6, ImageView imagen7, ImageView imagen8, ImageView imagen9 ){
+        if (piel==1 && ojos==1){
+            imagen1.setVisible(true);
+        } else if (piel==1 && ojos==2) {
+            imagen2.setVisible(true);
+        } else if (piel==1 && ojos==3) {
+            imagen3.setVisible(true);
+        } else if (piel==2 && ojos==1) {
+            imagen4.setVisible(true);
+        } else if (piel==2 && ojos==2) {
+            imagen5.setVisible(true);
+        } else if (piel==2 && ojos==3) {
+            imagen6.setVisible(true);
+        } else if (piel==3 && ojos==1) {
+            imagen7.setVisible(true);
+        } else if (piel==3 && ojos==2) {
+            imagen8.setVisible(true);
+        } else if (piel==3 && ojos==3) {
+            imagen9.setVisible(true);
+        }
     }
     
     @FXML
@@ -50,10 +101,10 @@ public class Escena02Controller{
     
     @FXML
     private void switchToEscena3() throws IOException {
-        String nombre = nickname2.getText();
-        Jugador jugador = new Jugador(nombre,0,0);
-        crearJugador(nombre, jugador);
-        if (jugador.getNickname()==nombre && jugador.getNickname()!=""){
+        String nombre = nickname2.getText().toUpperCase();
+        jugAct.setNickname(nombre);
+        App.setRoot("escena03");
+        if (jugAct.getNickname()==nombre && jugAct.getNickname()!=""){
             App.setRoot("escena03");
         } else {
             App.setRoot("escena02");

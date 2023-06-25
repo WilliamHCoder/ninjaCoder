@@ -34,15 +34,24 @@ public class Escena05aController {
     public Integer minusc=0, mayusc=0, numeros=0, espacios=0, otros=0, puntajeMision1=0;
     public Integer minuscCond=4, mayuscCond=4, numerosCond=5, espaciosCond=0, otrosCond=7;
     public Boolean juegoTerminado = false;
+    public ImageView pers5a_1_1, pers5a_1_2, pers5a_1_3, pers5a_2_1, pers5a_2_2, pers5a_2_3, pers5a_3_1, pers5a_3_2, pers5a_3_3;
+    public Escena02Controller escena02 = new Escena02Controller();
+    
+    
+    @FXML
+    protected void initialize() {
+        //Carga el los colores de piel y ojos seleccionados y actualiza la imagen de acuerdo a ellos
+        escena02.cargarImgPersonaje(escena02.jugAct.getTonoPiel(), escena02.jugAct.getColorOjos(), pers5a_1_1, pers5a_1_2, pers5a_1_3, pers5a_2_1, pers5a_2_2, pers5a_2_3, pers5a_3_1, pers5a_3_2, pers5a_3_3);
+    }    
     
     //Inicializa la misión, incluyendo el temporizador
     @FXML
     void iniciarJuego(ActionEvent event) {
         btnIniciar5a.setVisible(false);
-        Mision mision = new Mision(60);
-        boolean activo = mision.getJuegoActivo();
-        mision.temporizador(tiempo5a, linea1CincoA, linea2CincoA, linea3CincoA, linea4CincoA, linea5CincoA, linea6CincoA);
-        Mision1 coding = new Mision1(1,0,0, activo);
+        Mision mision = new Mision(60); ////// OJO CAMBIAR A 60 OJOJOJOJOJOJOJOJOJOJOJOJOJOJ
+        mision.setJuegoActivo(true);
+        mision.temporizadorMision1(tiempo5a, linea1CincoA, linea2CincoA, linea3CincoA, linea4CincoA, linea5CincoA, linea6CincoA);
+        Mision1 coding = new Mision1(1,0,0, mision.getJuegoActivo());
         coding.habilitarInput(linea1CincoA, true);
         mision.addTextLimit(linea1CincoA, 20);
         guardarLinea(linea1Jugador, linea1CincoA, linea2CincoA);
@@ -114,12 +123,9 @@ public class Escena05aController {
             ok.setVisible(true);
             puntajeMision1 += 20;
             puntaje5a.setText("• "+puntajeMision1.toString());
-            System.out.println("LÍNEA CORRECTA!: "+lineaValidar);            
         } else {
             noOk.setVisible(true);
-            System.out.println("LÍNEA INCORRECTA!: "+lineaValidar);            
         }
-        System.out.println("PUNTAJE ACUMULADO: "+puntajeMision1);            
         mayusc=0; minusc=0; numeros=0; espacios=0; otros=0;
     }
         

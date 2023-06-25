@@ -73,11 +73,10 @@
 .btn-mision:hover{
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 3, 0);
     }
-.btn-piel1{
-    -fx-background-color: #c69c6d;
-    -fx-text-fill: #c69c6d;
+.btn-piel-ojos{
     -fx-background-radius: 50;
     -fx-padding: 2 5 2 5;
+    -fx-text-fill: transparent;
     -fx-font-size: 45px;
     -fx-border: solid outside;
     -fx-border-color: #fff;
@@ -85,7 +84,24 @@
     -fx-border-radius: 50;
     -fx-cursor: hand;
     }
-.btn-piel1:hover{
+.btn-piel-ojos:hover{
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 3, 0);
     }
-
+.btn-piel1{
+    -fx-background-color: #c69c6d;
+    }
+.btn-piel2{
+    -fx-background-color: #534741;
+    }
+.btn-piel3{
+    -fx-background-color: #eab88b;
+    }
+.btn-ojos1{
+    -fx-background-color: #b97a00;
+    }
+.btn-ojos2{
+    -fx-background-color: #29abe2;
+    }
+.btn-ojos3{
+    -fx-background-color: #8cc63f;
+    }
