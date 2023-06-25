@@ -11,7 +11,10 @@ import com.ninjacoders.ninjacoder.App;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -24,13 +27,54 @@ public class Escena05bController {
      * Initializes the controller class.
      */
     @FXML
-    private Label tiempo5b;
+    public Label tiempo5b;
+    public Button jhgfdsdfgh;
+    public TextField textCadena, textCadena1;
+    ;
+   
+    @FXML
+    public Button btnGanaTemp5b;
+    @FXML
+    public Button btnPierdeTemp5b;
+    @FXML
+    public Button btnIniciar5b;
+    @FXML
+    public ImageView pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1, pers5b_2_2, pers5b_2_3, pers5b_3_1, pers5b_3_3;
+
+    @FXML
+    public ImageView ok1;
+    @FXML
+    public ImageView noOk1;
+    @FXML
+    public ImageView ok11;
+    @FXML
+    public ImageView noOk11;
+    @FXML
+    private Button btnAtrasE05b;
+
+    @FXML
+    private ImageView pers5b_3_2;
+    
+    
+    /*
+    se inicializa el juego  con el temporizador 
+    
+    
+    */
 
     @FXML
     void iniciarJuego(ActionEvent event) {
+        btnIniciar5b.setVisible(false);
         Mision mision = new Mision(5);
-        mision.temporizadorSencillo(tiempo5b);
-    } 
+        boolean activo = mision.getJuegoActivo();
+       
+        mision.temporizador(tiempo5b, textCadena1, textCadena1, textCadena1, textCadena1, textCadena1, textCadena1);
+        
+        
+ 
+     }
+        
+    
     
     @FXML
     private void switchToEscena06() throws IOException {
@@ -46,5 +90,6 @@ public class Escena05bController {
     private void switchToEscena4() throws IOException {
         App.setRoot("escena04");
     }
-    
-}   
+
+     // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }

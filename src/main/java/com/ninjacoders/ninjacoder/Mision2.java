@@ -17,36 +17,57 @@ import javafx.scene.control.TextField;
 // Hacemos uso de la herencia y llamamos los atributos y métodos de la clase mision
 public class Mision2 extends Mision{
     // atributos de la misión 2
-    private String Palabracondicion;
-    private Integer misionId;
+    public String Palabracondicion;
+    public Integer misionId ;
 
     // constructor
+
+    public Mision2() {
+    }
+
     public Mision2(String Palabracondicion, Integer misionId, Integer tiempoInicial) {
         super(tiempoInicial);
         this.Palabracondicion = Palabracondicion;
         this.misionId = misionId;
     }
 
+    public Mision2(String Palabracondicion, Integer misionId, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo) {
+        super(lineasCorrectas, lineasErradas, tiempoInicial, tiempoActivo);
+        this.Palabracondicion = Palabracondicion;
+        this.misionId = misionId;
+    }
 
-    // métodos getter and setter
+    public Mision2(String Palabracondicion, Integer misionId, Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
+        super(lineasCorrectas, lineasErradas, juegoActivo);
+        this.Palabracondicion = Palabracondicion;
+        this.misionId = misionId;
+    }
+
+    public Mision2(String Palabracondicion, Integer misionId) {
+        this.Palabracondicion = Palabracondicion;
+        this.misionId = misionId;
+    }
+
     public String getPalabracondicion() {
         return Palabracondicion;
     }
+
     public void setPalabracondicion(String Palabracondicion) {
         this.Palabracondicion = Palabracondicion;
     }
+
     public Integer getMisionId() {
         return misionId;
     }
+
     public void setMisionId(Integer misionId) {
         this.misionId = misionId;
     }
     
-    // otros métodos
-    public void elegirPalabCondAleat(){
+    
+    
+    
+    
 
-    }
-
-    //juanes 
     
 }

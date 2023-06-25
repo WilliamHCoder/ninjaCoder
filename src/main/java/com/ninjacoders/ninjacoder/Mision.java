@@ -109,7 +109,9 @@ public class Mision {
             if (tiempoRestante > 0) {
                 tiempoRestante--; //Disminuye en 1 seg.
                 Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
-            } else {
+            
+            
+            } else{
                 timer.cancel(); //Detiene el temporizador
                 setJuegoActivo(false);
                 linea1.setEditable(false);
@@ -118,6 +120,7 @@ public class Mision {
                 linea4.setEditable(false);
                 linea5.setEditable(false);
                 linea6.setEditable(false);
+                
             }
         }
         };
