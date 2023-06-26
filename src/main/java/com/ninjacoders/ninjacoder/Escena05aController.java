@@ -37,7 +37,7 @@ public class Escena05aController {
     public Boolean juegoTerminado = false;
     public ImageView pers5a_1_1, pers5a_1_2, pers5a_1_3, pers5a_2_1, pers5a_2_2, pers5a_2_3, pers5a_3_1, pers5a_3_2, pers5a_3_3;
     public Escena02Controller escena02 = new Escena02Controller();    
-    public Mision mision = new Mision(15); ////// OJO CAMBIAR A 60 OJOJOJOJOJOJOJOJOJOJOJOJOJOJ
+    public Mision mision = new Mision(60);
     public Mision1 coding = new Mision1();
     
     @FXML
