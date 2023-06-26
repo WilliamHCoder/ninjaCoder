@@ -72,8 +72,6 @@
             <Font size="32.0" />
          </font>
       </TextField>
-      <Button fx:id="btnGanaTemp5a" layoutX="1187.0" layoutY="296.0" mnemonicParsing="false" onAction="#switchToEscena06" text="gana" />
-      <Button fx:id="btnPierdeTemp5a" layoutX="1183.0" layoutY="334.0" mnemonicParsing="false" onAction="#switchToEscena07" text="pierde" />
       <Label fx:id="tiempo5a" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="540.0" prefHeight="116.0" prefWidth="145.0" styleClass="timer-label" stylesheets="@../../../src/styles.css" text="60" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Gill Sans" size="80.0" />

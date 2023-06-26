@@ -31,14 +31,7 @@ public class Mision2 extends Mision{
         this.misionId = misionId;
     }
 
-    public Mision2(String Palabracondicion, Integer misionId, Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo) {
-        super(lineasCorrectas, lineasErradas, tiempoInicial, tiempoActivo);
-        this.Palabracondicion = Palabracondicion;
-        this.misionId = misionId;
-    }
-
-    public Mision2(String Palabracondicion, Integer misionId, Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
-        super(lineasCorrectas, lineasErradas, juegoActivo);
+    public Mision2(String Palabracondicion, Integer misionId, Integer puntMision, Integer puntFinal, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
         this.Palabracondicion = Palabracondicion;
         this.misionId = misionId;
     }
@@ -62,12 +55,6 @@ public class Mision2 extends Mision{
 
     public void setMisionId(Integer misionId) {
         this.misionId = misionId;
-    }
-    
-    
-    
-    
-    
-
+    }   
     
 }

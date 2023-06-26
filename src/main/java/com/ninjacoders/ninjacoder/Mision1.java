@@ -5,7 +5,6 @@
 package com.ninjacoders.ninjacoder;
 
 import java.util.ArrayList;
-import javafx.scene.control.TextField;
 
 /**
  *
@@ -18,11 +17,14 @@ public class Mision1 extends Mision{
     private Integer misionId = 1;
 
     // constructor
-    public Mision1(Integer misionId, Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
-        super(lineasCorrectas, lineasErradas, juegoActivo);
+    public Mision1(Integer puntAnterior, Integer puntMision, Integer tiempoInicial, Boolean juegoActivo) {
+        super(puntAnterior, puntMision, tiempoInicial, juegoActivo);
         this.misionId = misionId;
     }
-
+    
+    public Mision1(){
+    }
+    
     // métodos getter and setter
     public ArrayList getCondiciones() {
         return condiciones;
@@ -36,8 +38,5 @@ public class Mision1 extends Mision{
     public void setMisionId(Integer misionId) {
         this.misionId = misionId;
     }
-    
-    // otros métodos
-    
-    
+
 }

@@ -101,7 +101,7 @@ public class Escena02Controller{
     
     @FXML
     private void switchToEscena3() throws IOException {
-        String nombre = nickname2.getText().toUpperCase();
+        String nombre = nickname2.getText();
         jugAct.setNickname(nombre);
         App.setRoot("escena03");
         if (jugAct.getNickname()==nombre && jugAct.getNickname()!=""){

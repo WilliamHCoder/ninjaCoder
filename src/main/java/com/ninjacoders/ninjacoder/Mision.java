@@ -20,8 +20,9 @@ import java.io.IOException;
 // La clase Mision será la clase padre para cada una de las 3 misiones del juego
 public class Mision {
     // atributos generales de la misión
-    private Integer lineasCorrectas;
-    private Integer lineasErradas;
+    private static Integer puntAnterior;
+    private static Integer puntMision;
+    private static Integer puntFinal;
     private Integer tiempoInicial;
     private Integer tiempoActivo;
     private static Boolean juegoActivo = false;
@@ -30,17 +31,11 @@ public class Mision {
     public Mision(Integer tiempoInicial) {
         this.tiempoInicial = tiempoInicial;
     }
-
-    public Mision(Integer lineasCorrectas, Integer lineasErradas, Integer tiempoInicial, Integer tiempoActivo) {
-        this.lineasCorrectas = lineasCorrectas;
-        this.lineasErradas = lineasErradas;
-        this.tiempoInicial = tiempoInicial;
-        this.tiempoActivo = tiempoActivo;
-    }
-
-    public Mision(Integer lineasCorrectas, Integer lineasErradas, Boolean juegoActivo) {
-        this.lineasCorrectas = lineasCorrectas;
-        this.lineasErradas = lineasErradas;
+    
+    public Mision(Integer puntAnterior, Integer puntMision, Integer puntFinal, Boolean juegoActivo) {
+        this.puntAnterior = puntAnterior;
+        this.puntMision = puntMision;
+        this.puntFinal = puntFinal;
         this.juegoActivo = juegoActivo;
     }
 
@@ -48,19 +43,24 @@ public class Mision {
     public Mision() {
     }
     
-    
     // métodos getter y setter
-    public Integer getLineasCorrectas() {
-        return lineasCorrectas;
+    public Integer getPuntAnterior() {
+        return puntAnterior;
     }
-    public void setLineasCorrectas(Integer lineasCorrectas) {
-        this.lineasCorrectas = lineasCorrectas;
+    public void setPuntAnterior(Integer puntAnterior) {
+        this.puntAnterior = puntAnterior;
+    } 
+    public Integer getPuntMision() {
+        return puntMision;
     }
-    public Integer getLineasErradas() {
-        return lineasErradas;
+    public void setPuntMision(Integer puntMision) {
+        this.puntMision = puntMision;
+    }    
+    public Integer getPuntFinal() {
+        return puntFinal;
     }
-    public void setLineasErradas(Integer lineasErradas) {
-        this.lineasErradas = lineasErradas;
+    public void setPuntFinal(Integer puntFinal) {
+        this.puntFinal = puntFinal;
     }
     public Integer getTiempoInicial() {
         return tiempoInicial;
@@ -86,9 +86,8 @@ public class Mision {
 
     } 
  
-    
     // Método para mostrar ejecutar el TEMPORIZADOR en las diferentes misiones.
-    public void temporizadorMision1(Label label, TextField linea1, TextField linea2, TextField linea3, TextField linea4, TextField linea5, TextField linea6){
+    public void temporizadorMision1(Label label, TextField linea1, TextField linea2, TextField linea3, TextField linea4, TextField linea5, TextField linea6, Escena02Controller escena02, Mision mision){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
         int tiempoRestante = tiempoInicial;
@@ -106,11 +105,21 @@ public class Mision {
                 linea4.setEditable(false);
                 linea5.setEditable(false);
                 linea6.setEditable(false);
-                //Redirecciona a las escenas de éxito o fallo                
-                try {
+                escena02.jugAct.setPuntuacion(mision.getPuntAnterior()+mision.getPuntMision());
+                mision.setPuntFinal(mision.getPuntAnterior()+mision.getPuntMision());
+                //Redirecciona a las escenas de éxito o fallo         
+                if (mision.getPuntMision()>=60){
+                    try {
+                    App.setRoot("escena06");
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                } else {
+                    try {
                     App.setRoot("escena07");
-                } catch (IOException ex) {
-                    ex.printStackTrace();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
                 }
             }
         }
@@ -155,7 +164,6 @@ public class Mision {
         };
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }    
-    
     
     //HABILITA la opción de ver los INPUTS al iniciar el juego
     public void habilitarInput(TextField field, Boolean lineaActiva){

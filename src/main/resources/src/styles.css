@@ -35,6 +35,22 @@
     -fx-background-color: transparent;
     -fx-border-color: none;
     }
+.puntaje-local-label2{
+    -fx-text-fill: #ECD81E;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 40px;
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    }
+.puntaje-local-labelFinal{
+    -fx-text-fill: #ECD81E;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 55px;
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+    }
 .coding-label{
     -fx-text-fill: #fff;
     -fx-font-family: "Verdana";
@@ -63,6 +79,13 @@
     -fx-font-family: "Verdana";
     -fx-font-weight: Bold;
     -fx-font-size: 60px;
+    -fx-text-alignment: left;
+}
+.texto-nickname-mision-compl{
+    -fx-text-fill: #fff;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: Bold;
+    -fx-font-size: 70px;
     -fx-text-alignment: left;
 }
 .btn-mision{

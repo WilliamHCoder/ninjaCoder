@@ -31,12 +31,14 @@ public class Escena05aController {
     public Button btnIniciar5a;
     public String linea1Jugador, linea2Jugador, linea3Jugador, linea4Jugador, linea5Jugador, linea6Jugador;
     public ImageView ok1, noOk1, ok2, noOk2, ok3, noOk3, ok4, noOk4, ok5, noOk5, ok6, noOk6;
-    public Integer minusc=0, mayusc=0, numeros=0, espacios=0, otros=0, puntajeMision1=0;
+    public Integer minusc=0, mayusc=0, numeros=0, espacios=0, otros=0;
+    public static Integer puntajeMision1 = 0;
     public Integer minuscCond=4, mayuscCond=4, numerosCond=5, espaciosCond=0, otrosCond=7;
     public Boolean juegoTerminado = false;
     public ImageView pers5a_1_1, pers5a_1_2, pers5a_1_3, pers5a_2_1, pers5a_2_2, pers5a_2_3, pers5a_3_1, pers5a_3_2, pers5a_3_3;
-    public Escena02Controller escena02 = new Escena02Controller();
-    
+    public Escena02Controller escena02 = new Escena02Controller();    
+    public Mision mision = new Mision(15); ////// OJO CAMBIAR A 60 OJOJOJOJOJOJOJOJOJOJOJOJOJOJ
+    public Mision1 coding = new Mision1();
     
     @FXML
     protected void initialize() {
@@ -48,10 +50,13 @@ public class Escena05aController {
     @FXML
     void iniciarJuego(ActionEvent event) {
         btnIniciar5a.setVisible(false);
-        Mision mision = new Mision(60); ////// OJO CAMBIAR A 60 OJOJOJOJOJOJOJOJOJOJOJOJOJOJ
         mision.setJuegoActivo(true);
-        mision.temporizadorMision1(tiempo5a, linea1CincoA, linea2CincoA, linea3CincoA, linea4CincoA, linea5CincoA, linea6CincoA);
-        Mision1 coding = new Mision1(1,0,0, mision.getJuegoActivo());
+        mision.setPuntAnterior(escena02.jugAct.getPuntuacion());
+        puntajeMision1 = 0;
+        mision.setPuntMision(0);
+        mision.setPuntFinal(0);
+        coding.setMisionId(1);
+        mision.temporizadorMision1(tiempo5a, linea1CincoA, linea2CincoA, linea3CincoA, linea4CincoA, linea5CincoA, linea6CincoA, escena02, mision);
         coding.habilitarInput(linea1CincoA, true);
         mision.addTextLimit(linea1CincoA, 20);
         guardarLinea(linea1Jugador, linea1CincoA, linea2CincoA);
@@ -65,9 +70,7 @@ public class Escena05aController {
     //Aplica los diferentes algoritmos al texto ingresado por el jugador
     @FXML
     void guardarLinea( String lineaSave, TextField lineaAct, TextField lineaSig){
-        Mision mision = new Mision(60);
-        boolean activo = mision.getJuegoActivo();
-        Mision1 coding = new Mision1(1,0,0, activo);
+//        boolean activo = mision.getJuegoActivo();
         lineaAct.setOnKeyPressed(event -> {
         if (event.getCode() == KeyCode.ENTER) { 
             mision.addTextLimit(lineaSig, 20); 
@@ -122,6 +125,7 @@ public class Escena05aController {
         if (mayusc==mayuscCond && minusc==minuscCond && numeros==numerosCond && espacios==espaciosCond && otros==otrosCond){
             ok.setVisible(true);
             puntajeMision1 += 20;
+            mision.setPuntMision(puntajeMision1);
             puntaje5a.setText("• "+puntajeMision1.toString());
         } else {
             noOk.setVisible(true);
@@ -129,17 +133,7 @@ public class Escena05aController {
         mayusc=0; minusc=0; numeros=0; espacios=0; otros=0;
     }
         
-    //Métodos para los botones 
-    @FXML
-    private void switchToEscena06() throws IOException {
-        App.setRoot("escena06");
-    }
-    
-    @FXML
-    private void switchToEscena07() throws IOException {
-        App.setRoot("escena07");
-    }
-    
+    //Métodos para los botones     
         @FXML
     private void switchToEscena4() throws IOException {
         App.setRoot("escena04");
