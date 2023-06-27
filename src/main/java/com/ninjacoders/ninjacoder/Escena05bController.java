@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 
 import com.ninjacoders.ninjacoder.App;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -60,21 +62,49 @@ public class Escena05bController {
     se inicializa el juego  con el temporizador 
     
     
-    */
-
+        */
+    
     @FXML
     void iniciarJuego(ActionEvent event) {
         btnIniciar5b.setVisible(false);
-        Mision mision = new Mision(5);
+        Mision mision = new Mision(15);
         boolean activo = mision.getJuegoActivo();
-       
-        mision.temporizador(tiempo5b, textCadena1, textCadena1, textCadena1, textCadena1, textCadena1, textCadena1);
+    //se crea  la lista y se brinda la palabra aleatoria a memorizar    
+        mision.temporizador(tiempo5b, textCadena1);
+         List<String> listAleatoria = new ArrayList<String> ();
+        
+        listAleatoria.add("jose");
+        listAleatoria.add("pedro");
+        listAleatoria.add("mariana");
+        listAleatoria.add("juan");
+        
+        int aleatoria = (int) (Math.random() * 4);
         
         
- 
-     }
+        textCadena1.setText(listAleatoria.get(aleatoria));
         
+        String cadena = textCadena.getText();
+        
+        
+        
+     // se crea la condicion de comparacion       
+        
+        for(int i=0;   i<listAleatoria.size(); i++);
+        
+        if (listAleatoria.get(aleatoria).equals(cadena)){
+            textCadena1.setText("vas bien");
+            textCadena1.setVisible(true);
+            return;
+        }else{
+            
+           
+        
+        
+        
+        
+        }
     
+        }
     
     @FXML
     private void switchToEscena06() throws IOException {

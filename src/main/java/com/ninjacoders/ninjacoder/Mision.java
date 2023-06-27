@@ -127,7 +127,7 @@ public class Mision {
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }
     
-    public void temporizador(Label label, TextField linea1, TextField linea2, TextField linea3, TextField linea4, TextField linea5, TextField linea6){
+    public void temporizador(Label label, TextField linea1){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
         int tiempoRestante = tiempoInicial;

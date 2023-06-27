@@ -22,7 +22,6 @@ public class Escena03Controller {
     public Label nickname3;
     public ImageView personaje_1_1, personaje_1_2, personaje_1_3, personaje_2_1, personaje_2_2, personaje_2_3, personaje_3_1, personaje_3_2, personaje_3_3;
     public Escena02Controller escena02 = new Escena02Controller();
-    
     @FXML
     protected void initialize() {        
         nickname3.setText(escena02.jugAct.getNickname()+"!"); //Carga el nombre ingresado y lo muestra
