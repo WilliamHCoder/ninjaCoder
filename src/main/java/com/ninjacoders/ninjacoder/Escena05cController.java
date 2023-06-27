@@ -13,38 +13,45 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-/**
- * FXML Controller class
- *
- * @author williamhernandezleon
- */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Escena05cController {
 
-    /**
-     * Initializes the controller class.
-     */
     @FXML
     private Label tiempo5c;
 
     @FXML
     void iniciarJuego(ActionEvent event) {
+        List<String> palabras = new ArrayList<>();
+        palabras.add("casa");
+        palabras.add("perro");
+        palabras.add("jardín");
+        // Agrega todas las palabras que desees al listado
+
+        Random random = new Random();
+        String palabraAleatoria = palabras.get(random.nextInt(palabras.size()));
+
+        System.out.println("Palabra aleatoria: " + palabraAleatoria);
+
         Mision mision = new Mision(30);
         mision.temporizadorMision3(tiempo5c);
-    } 
-    
+    }
+
     @FXML
     private void switchToEscena06() throws IOException {
         App.setRoot("escena06");
     }
-    
+
     @FXML
     private void switchToEscena07() throws IOException {
         App.setRoot("escena07");
     }
-        
+
     @FXML
     private void switchToEscena4() throws IOException {
         App.setRoot("escena04");
     }
-    
-}   
+
+}
