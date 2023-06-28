@@ -6,6 +6,7 @@ package com.ninjacoders.ninjacoder;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -13,6 +14,15 @@ import javafx.fxml.FXML;
  * @author williamhernandezleon
  */
 public class Escena04Controller {
+
+    @FXML
+    private Button btnAtrasE04;
+    @FXML
+    private Button btnMision1;
+    @FXML
+    private Button btnMision2;
+    @FXML
+    private Button btnMision3;
 
     /**
      * Initializes the controller class.

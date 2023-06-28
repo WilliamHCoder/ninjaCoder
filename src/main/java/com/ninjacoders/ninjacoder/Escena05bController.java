@@ -85,12 +85,8 @@ public class Escena05bController {
             textCadena1.setText("vas bien");
             textCadena1.setVisible(true);
             return;
-        }else{
-            
-           
-        
-        
-        
+             }else{
+      
         
         }
     
@@ -112,4 +108,5 @@ public class Escena05bController {
     }
 
      // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
+}
