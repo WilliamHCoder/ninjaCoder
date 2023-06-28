@@ -32,38 +32,28 @@ public class Escena05bController {
     public Label tiempo5b;
     public Button jhgfdsdfgh;
     public TextField textCadena, textCadena1;
-    ;
-   
-    @FXML
     public Button btnGanaTemp5b;
-    @FXML
     public Button btnPierdeTemp5b;
-    @FXML
     public Button btnIniciar5b;
-    @FXML
-    public ImageView pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1, pers5b_2_2, pers5b_2_3, pers5b_3_1, pers5b_3_3;
-
-    @FXML
+    public ImageView pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1, pers5b_2_2, pers5b_2_3, pers5b_3_1, pers5b_3_2, pers5b_3_3;
     public ImageView ok1;
-    @FXML
     public ImageView noOk1;
-    @FXML
     public ImageView ok11;
-    @FXML
     public ImageView noOk11;
-    @FXML
     private Button btnAtrasE05b;
+    public Escena02Controller escena02 = new Escena02Controller();  
+    
 
+    // se pasan caracterizticas elegidas por el jugador 
     @FXML
-    private ImageView pers5b_3_2;
-    
-    
-    /*
-    se inicializa el juego  con el temporizador 
-    
-    
-        */
-    
+    protected void initialize(){
+        
+        escena02.cargarImgPersonaje(escena02.jugAct.getColorOjos(), escena02.jugAct.getTonoPiel(), pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1,
+                pers5b_2_2, pers5b_2_3, pers5b_3_1, pers5b_3_2, pers5b_3_3);
+        
+    }
+  //se inicia el juego el temporizador 
+       
     @FXML
     void iniciarJuego(ActionEvent event) {
         btnIniciar5b.setVisible(false);

@@ -20,12 +20,12 @@ import java.io.IOException;
 // La clase Mision será la clase padre para cada una de las 3 misiones del juego
 public class Mision {
     // atributos generales de la misión
-    private static Integer puntAnterior;
-    private static Integer puntMision;
-    private static Integer puntFinal;
-    private Integer tiempoInicial;
-    private Integer tiempoActivo;
-    private static Boolean juegoActivo = false;
+    public static Integer puntAnterior;
+    public static Integer puntMision;
+    public static Integer puntFinal;
+    public Integer tiempoInicial;
+    public Integer tiempoActivo;
+    public static Boolean juegoActivo = false;
 
     //constructor para el temporizador
     public Mision(Integer tiempoInicial) {
