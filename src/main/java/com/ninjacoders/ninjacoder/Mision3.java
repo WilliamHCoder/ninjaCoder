@@ -6,10 +6,11 @@ package com.ninjacoders.ninjacoder;
 import java.util.ArrayList;
 
 /**
- *
- * @author williamhernandezleon
- */
-// Hacemos uso de la herencia y llamamos los atributos y métodos de la clase mision
+* Clase Mision3
+*
+* @author williamhernandezleon
+* | Clase mision3 - parametros, constructores y metodos.
+*/
 public class Mision3 extends Mision{
     // atributos de la misión 3
     private ArrayList listaPalabras;

@@ -19,15 +19,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 /**
- * FXML Controller class
+ * Escena05b - Mision 2
  *
- * @author williamhernandezleon
+ * @author juanestebanvelazquezmorera
+ * | Controlador para la mision 2.
  */
+
 public class Escena05bController {
 
-    /**
-     * Initializes the controller class.
-     */
     @FXML
     public Label tiempo5b;
     public Button jhgfdsdfgh;
@@ -43,8 +42,7 @@ public class Escena05bController {
     private Button btnAtrasE05b;
     public Escena02Controller escena02 = new Escena02Controller();  
     
-
-    // se pasan caracterizticas elegidas por el jugador 
+    /** se pasan caracteristicas elegidas por el jugador **/
     @FXML
     protected void initialize(){
         
@@ -52,8 +50,8 @@ public class Escena05bController {
                 pers5b_2_2, pers5b_2_3, pers5b_3_1, pers5b_3_2, pers5b_3_3);
         
     }
-  //se inicia el juego el temporizador 
-       
+    
+    /**se inicia el juego el temporizador**/
     @FXML
     void iniciarJuego(ActionEvent event) {
         btnIniciar5b.setVisible(false);
@@ -106,7 +104,5 @@ public class Escena05bController {
     private void switchToEscena4() throws IOException {
         App.setRoot("escena04");
     }
-
-     // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 
 }

@@ -11,10 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 /**
- *
- * @author williamhernandezleon
- */
-// Hacemos uso de la herencia y llamamos los atributos y métodos de la clase mision
+* Clase Mision2
+*
+* @author williamhernandezleon
+* | Clase mision2 - parametros, constructores y metodos.
+*/
 public class Mision2 extends Mision{
     // atributos de la misión 2
     public String Palabracondicion;

@@ -10,9 +10,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 /**
- * FXML Controller class
+ * Escena07 - ¡Mision fallida!
  *
  * @author williamhernandezleon
+ * | Controlador que muestra si el jugador NO cumplio el puntaje minimo y la mision fue fallida.
  */
 public class Escena07Controller {
     public Escena05aController mision1 = new Escena05aController();
@@ -20,6 +21,7 @@ public class Escena07Controller {
     public Escena02Controller escena02 = new Escena02Controller();
     public Label nickname7, puntajeAnt7, puntajeMision7, puntajeFinal7;
 
+    /**Método que carga los datos de puntaje de la mision**/    
     @FXML
     protected void initialize() {
         nickname7.setText(escena02.jugAct.getNickname().toString()+":");

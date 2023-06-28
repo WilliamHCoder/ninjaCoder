@@ -13,16 +13,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+
 /**
- * FXML Controller class
+ * Escena05a - Mision 1
  *
  * @author williamhernandezleon
+ * | Controlador para la mision 1.
  */
 public class Escena05aController {
-
-    /**
-     * Initializes the controller class.
-     */
     
     //Variables de los elementos de la interfaz
     @FXML
@@ -40,15 +38,16 @@ public class Escena05aController {
     public Mision mision = new Mision(60);
     public Mision1 coding = new Mision1();
     
-    @FXML
+    /**Método que carga la imagen del jugador de acuerdo a seleccion**/
+    @FXML    
     protected void initialize() {
         //Carga el los colores de piel y ojos seleccionados y actualiza la imagen de acuerdo a ellos
         escena02.cargarImgPersonaje(escena02.jugAct.getTonoPiel(), escena02.jugAct.getColorOjos(), pers5a_1_1, pers5a_1_2, pers5a_1_3, pers5a_2_1, pers5a_2_2, pers5a_2_3, pers5a_3_1, pers5a_3_2, pers5a_3_3);
     }    
     
-    //Inicializa la misión, incluyendo el temporizador
+    /**Método para iniciar el juego al darle clic al boton**/
     @FXML
-    void iniciarJuego(ActionEvent event) {
+    public void iniciarJuego(ActionEvent event) {
         btnIniciar5a.setVisible(false);
         mision.setJuegoActivo(true);
         mision.setPuntAnterior(escena02.jugAct.getPuntuacion());
@@ -67,10 +66,9 @@ public class Escena05aController {
         guardarLinea(linea6Jugador, linea6CincoA, linea6CincoA);
     } 
     
-    //Aplica los diferentes algoritmos al texto ingresado por el jugador
+    /**Metodo que aplica los diferentes algoritmos al texto ingresado por el jugador y limita a 20 el numero de caracteres**/
     @FXML
-    void guardarLinea( String lineaSave, TextField lineaAct, TextField lineaSig){
-//        boolean activo = mision.getJuegoActivo();
+    public void guardarLinea( String lineaSave, TextField lineaAct, TextField lineaSig){
         lineaAct.setOnKeyPressed(event -> {
         if (event.getCode() == KeyCode.ENTER) { 
             mision.addTextLimit(lineaSig, 20); 
@@ -105,7 +103,8 @@ public class Escena05aController {
         });
     }
     
-    void validarLinea(String lineaValidar, TextField lineaAct, ImageView ok, ImageView noOk) {
+    /**Metodo para validar cada una de las lineas ingresadas de acuerdo a las condiciones**/    
+    public void validarLinea(String lineaValidar, TextField lineaAct, ImageView ok, ImageView noOk) {
         lineaAct.setText(lineaValidar);
         lineaAct.setEditable(false);
         char linea[] = lineaValidar.toCharArray();

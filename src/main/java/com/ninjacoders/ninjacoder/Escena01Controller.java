@@ -8,9 +8,10 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 
 /**
- * FXML Controller class
+ * Escena01 - Escena inicial
  *
  * @author williamhernandezleon
+ * | Controlador de la escena01 en donde se presenta logo y se inicia el juego.
  */
 public class Escena01Controller {
 

@@ -17,11 +17,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Escena05c - Mision 3
+ *
+ * @author peteralexanderbenavidezapraez
+ * | Controlador para la mision 3.
+ */
 public class Escena05cController {
 
     @FXML
     private Label tiempo5c;
 
+    /**Inicializa el juego**/
     @FXML
     void iniciarJuego(ActionEvent event) {
         List<String> palabras = new ArrayList<>();

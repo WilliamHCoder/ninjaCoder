@@ -12,15 +12,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 /**
- * FXML Controller class
+ * Escena02 - Escoger caracteristicas del personaje
  *
  * @author williamhernandezleon
+ * | Controlador para la escena02 en donde se escogen las características del personaje y nickname.
  */
+
 public class Escena02Controller{
 
-    /**
-     * Initializes the controller class.
-     */
      //Variables de los elementos de la interfaz
     public TextField nickname2;    
     public String nombreLabel;
@@ -65,14 +64,15 @@ public class Escena02Controller{
         jugAct.setColorOjos(3); 
     }
     
-    //Método para modificar opacidad de los botones no seleccionados
-    void selColorGen(Button btnPrinc, Button btnSec, Button btnTerc){
+    /**Método para modificar opacidad de los botones no seleccionados**/
+    public void selColorGen(Button btnPrinc, Button btnSec, Button btnTerc){
         btnPrinc.setOpacity(1);
         btnSec.setOpacity(0.3);
         btnTerc.setOpacity(0.3);
     }
     
-    void cargarImgPersonaje(int piel, int ojos, ImageView imagen1, ImageView imagen2, ImageView imagen3, ImageView imagen4, ImageView imagen5, ImageView imagen6, ImageView imagen7, ImageView imagen8, ImageView imagen9 ){
+    /**Método para cargar el personaje en las siguientes escenas**/
+    public void cargarImgPersonaje(int piel, int ojos, ImageView imagen1, ImageView imagen2, ImageView imagen3, ImageView imagen4, ImageView imagen5, ImageView imagen6, ImageView imagen7, ImageView imagen8, ImageView imagen9 ){
         if (piel==1 && ojos==1){
             imagen1.setVisible(true);
         } else if (piel==1 && ojos==2) {
@@ -99,6 +99,7 @@ public class Escena02Controller{
         App.setRoot("escena01");
     }
     
+    /**Carga la siguiente escena y guardar el nickname ingresado**/    
     @FXML
     private void switchToEscena3() throws IOException {
         String nombre = nickname2.getText();

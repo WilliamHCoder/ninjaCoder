@@ -10,9 +10,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 /**
- * FXML Controller class
+ * Escena06 - ¡Mision exitosa!
  *
  * @author williamhernandezleon
+ * | Controlador que muestra si el jugador cumplio el puntaje minimo y la mision fue exitosa.
  */
 public class Escena06Controller {
     public Escena05aController mision1 = new Escena05aController();
@@ -20,6 +21,7 @@ public class Escena06Controller {
     public Escena02Controller escena02 = new Escena02Controller();
     public Label nickname6, puntajeAnt6, puntajeMision6, puntajeFinal6;
 
+    /**Método que carga los datos de puntaje de la mision**/
     @FXML
     protected void initialize() {
         nickname6.setText(escena02.jugAct.getNickname().toString()+":");

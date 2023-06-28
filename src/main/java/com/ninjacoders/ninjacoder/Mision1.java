@@ -7,10 +7,11 @@ package com.ninjacoders.ninjacoder;
 import java.util.ArrayList;
 
 /**
+ * Clase Mision1
  *
  * @author williamhernandezleon
+ * | Clase mision1 - parametros, constructores y metodos.
  */
-// Hacemos uso de la herencia y llamamos los atributos y métodos de la clase mision
 public class Mision1 extends Mision{
     // atributos de la misión 1
     private ArrayList condiciones;

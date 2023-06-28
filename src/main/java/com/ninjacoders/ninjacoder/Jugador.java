@@ -3,9 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.ninjacoders.ninjacoder;
+
 /**
+ * Clase Jugador
  *
  * @author williamhernandezleon
+ * | Clase jugador - parametros, constructores y metodos.
  */
 public class Jugador {
     // atributos del Jugador

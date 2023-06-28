@@ -13,11 +13,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import com.ninjacoders.ninjacoder.App;
 import java.io.IOException;
+
 /**
+ * Clase Mision - Clase general para las 3 misiones
  *
  * @author williamhernandezleon
+ * | Clase mision - parametros y metodos comunes.
  */
-// La clase Mision será la clase padre para cada una de las 3 misiones del juego
+
 public class Mision {
     // atributos generales de la misión
     public static Integer puntAnterior;
@@ -86,7 +89,7 @@ public class Mision {
 
     } 
  
-    // Método para mostrar ejecutar el TEMPORIZADOR en las diferentes misiones.
+    /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 1**/
     public void temporizadorMision1(Label label, TextField linea1, TextField linea2, TextField linea3, TextField linea4, TextField linea5, TextField linea6, Escena02Controller escena02, Mision mision){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
@@ -127,6 +130,7 @@ public class Mision {
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }
     
+    /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 2**/
     public void temporizador(Label label, TextField linea1){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
@@ -146,6 +150,7 @@ public class Mision {
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }    
     
+    /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 3**/    
     public void temporizadorMision3(Label label){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
@@ -165,7 +170,7 @@ public class Mision {
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }    
     
-    //HABILITA la opción de ver los INPUTS al iniciar el juego
+    /**Método que HABILITA la opción de ver los INPUTS al iniciar el juego**/
     public void habilitarInput(TextField field, Boolean lineaActiva){
         if (lineaActiva == true){
             field.setVisible(true);
@@ -174,7 +179,7 @@ public class Mision {
         }
     }
     
-    //LIMITA el MÁXIMO de CARACTERES de la línea de código
+    /**Método que LIMITA el MÁXIMO de CARACTERES de la línea de código**/
     public void addTextLimit(final TextField field, final int maxLength) {
         field.textProperty().addListener(new ChangeListener<String>() {
             @Override

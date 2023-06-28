@@ -9,24 +9,19 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 /**
- * FXML Controller class
+ * Escena04 - Escoger la misión que se quiere jugar
  *
  * @author williamhernandezleon
+ * | Controlador para la escena04 - Seleccion de mision.
  */
 public class Escena04Controller {
 
     @FXML
     private Button btnAtrasE04;
-    @FXML
     private Button btnMision1;
-    @FXML
     private Button btnMision2;
-    @FXML
     private Button btnMision3;
 
-    /**
-     * Initializes the controller class.
-     */
     @FXML
     private void switchToEscena3() throws IOException {
         App.setRoot("escena03");
