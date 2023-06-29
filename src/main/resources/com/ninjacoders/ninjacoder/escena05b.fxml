@@ -42,11 +42,6 @@
             <Image url="@../../../src/05b_ninjaCoder_Escena_5B_num_lineas.png" />
          </image>
       </ImageView>
-      <TextField fx:id="textCadena1" layoutX="496.0" layoutY="226.0" prefHeight="61.0" prefWidth="565.0" promptText="Preparado?">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </TextField>
       <TextField fx:id="textCadena" layoutX="496.0" layoutY="345.0" prefHeight="61.0" prefWidth="565.0" promptText="ingresa el codigo...">
          <font>
             <Font size="32.0" />
@@ -138,5 +133,10 @@
             </Pane>
          </children>
       </Pane>
+      <Label fx:id="Cadena1" accessibleRole="TEXT_FIELD" alignment="CENTER" contentDisplay="CENTER" layoutX="512.0" layoutY="230.0" prefHeight="61.0" prefWidth="479.0" text="Preparado...?" textAlignment="CENTER" textFill="#fffffff7">
+         <font>
+            <Font name="Times New Roman Bold" size="31.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -131,7 +131,7 @@ public class Mision {
     }
     
     /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 2**/
-    public void temporizador(Label label, TextField linea1){
+    public void temporizador(Label label, Label linea1){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
         int tiempoRestante = tiempoInicial;

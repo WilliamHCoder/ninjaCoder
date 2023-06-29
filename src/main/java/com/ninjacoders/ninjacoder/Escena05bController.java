@@ -28,9 +28,9 @@ import javafx.scene.image.ImageView;
 public class Escena05bController {
 
     @FXML
-    public Label tiempo5b;
+    public Label tiempo5b, Cadena1;
     public Button jhgfdsdfgh;
-    public TextField textCadena, textCadena1;
+    public TextField textCadena ;
     public Button btnGanaTemp5b;
     public Button btnPierdeTemp5b;
     public Button btnIniciar5b;
@@ -39,14 +39,14 @@ public class Escena05bController {
     public ImageView noOk1;
     public ImageView ok11;
     public ImageView noOk11;
+    @FXML
     private Button btnAtrasE05b;
     public Escena02Controller escena02 = new Escena02Controller();  
-    
+
     /** se pasan caracteristicas elegidas por el jugador **/
-    @FXML
     protected void initialize(){
         
-        escena02.cargarImgPersonaje(escena02.jugAct.getColorOjos(), escena02.jugAct.getTonoPiel(), pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1,
+        escena02.cargarImgPersonaje(escena02.jugAct.getTonoPiel(), escena02.jugAct.getColorOjos(), pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1,
                 pers5b_2_2, pers5b_2_3, pers5b_3_1, pers5b_3_2, pers5b_3_3);
         
     }
@@ -58,7 +58,7 @@ public class Escena05bController {
         Mision mision = new Mision(15);
         boolean activo = mision.getJuegoActivo();
     //se crea  la lista y se brinda la palabra aleatoria a memorizar    
-        mision.temporizador(tiempo5b, textCadena1);
+        mision.temporizador(tiempo5b, Cadena1);
          List<String> listAleatoria = new ArrayList<String> ();
         
         listAleatoria.add("jose");
@@ -68,8 +68,8 @@ public class Escena05bController {
         
         int aleatoria = (int) (Math.random() * 4);
         
-        
-        textCadena1.setText(listAleatoria.get(aleatoria));
+        Cadena1.setText(listAleatoria.get(aleatoria));
+       
         
         String cadena = textCadena.getText();
         
@@ -80,8 +80,10 @@ public class Escena05bController {
         for(int i=0;   i<listAleatoria.size(); i++);
         
         if (listAleatoria.get(aleatoria).equals(cadena)){
-            textCadena1.setText("vas bien");
-            textCadena1.setVisible(true);
+            Cadena1.setText("vas bien");
+            Cadena1.setVisible(true);
+     
+         
             return;
              }else{
       
