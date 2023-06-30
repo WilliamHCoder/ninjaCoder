@@ -142,13 +142,12 @@ public class Mision {
                 tiempoRestante--; //Disminuye en 1 seg.
                 Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
             } else {
-                timer.cancel(); //Detiene el temporizador
-                setJuegoActivo(false);
+                
             }
         }
         };
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
-    }    
+    }
     
     /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 3**/    
     public void temporizadorMision3(Label label){

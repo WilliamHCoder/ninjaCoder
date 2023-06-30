@@ -19,7 +19,7 @@ import javafx.scene.control.TextField;
 public class Mision2 extends Mision{
     // atributos de la misión 2
     public String Palabracondicion;
-    public Integer misionId ;
+    public Integer misionId =2;
 
     // constructor
 
