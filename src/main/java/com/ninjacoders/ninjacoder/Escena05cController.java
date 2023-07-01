@@ -62,9 +62,12 @@ public class Escena05cController {
 //        System.out.println(mision.getJuegoActivo());
         
         palabras = new ArrayList<>();
-        palabras.add(new Palabra("casa", "asac"));
-        palabras.add(new Palabra("perro", "rrope"));
-        palabras.add(new Palabra("jardín", "ínrjda"));
+        palabras.add(new Palabra("programacion", "noicgramarop"));
+        palabras.add(new Palabra("paradigmas", "igdrpaaasm"));
+        palabras.add(new Palabra("metodo", "ooetmd"));
+         palabras.add(new Palabra("package", "egpack"));
+          palabras.add(new Palabra("variables", "ablseiavr"));
+           palabras.add(new Palabra("publicvoid", "diovilupb"));
         // Agrega todas las palabras que desees al listado
 
         // Desordenar las palabras
