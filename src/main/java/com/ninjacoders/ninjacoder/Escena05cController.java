@@ -65,7 +65,7 @@ public class Escena05cController {
         palabras.add(new Palabra("programacion", "noicgramarop"));
         palabras.add(new Palabra("paradigmas", "igdrpaaasm"));
         palabras.add(new Palabra("metodo", "ooetmd"));
-         palabras.add(new Palabra("package", "egpack"));
+         palabras.add(new Palabra("package", "egpaack"));
           palabras.add(new Palabra("variables", "ablseiavr"));
            palabras.add(new Palabra("publicvoid", "diovilupb"));
         // Agrega todas las palabras que desees al listado
