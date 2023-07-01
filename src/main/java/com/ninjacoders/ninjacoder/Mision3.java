@@ -23,10 +23,13 @@ public class Mision3 extends Mision{
         this.listaPalabras = listaPalabras;
         this.misionId = misionId;
     }
-
-    Mision3(int i, String ordenada) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    
+    public Mision3(){
     }
+
+//    Mision3(int i, String ordenada) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
     // métodos getter and setter
     public ArrayList getListaPalabras() {
@@ -51,13 +54,13 @@ public class Mision3 extends Mision{
 
     }
 
-    void verificarPalabra(String palabraIngresada) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void iniciarMision(Label tiempo5c) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    void verificarPalabra(String palabraIngresada) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
+//
+//    void iniciarMision(Label tiempo5c) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
     
     

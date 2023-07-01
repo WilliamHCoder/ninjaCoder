@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ninjacoders.ninjacoder.Escena05cController">
@@ -40,17 +41,12 @@
             <Image url="@../../../src/05b_ninjaCoder_Escena_5B_num_lineas.png" />
          </image>
       </ImageView>
-      <TextField layoutX="496.0" layoutY="226.0" prefHeight="61.0" prefWidth="565.0" text="argipmsaad">
+      <TextField fx:id="palabraTextField3" editable="false" layoutX="496.0" layoutY="336.0" prefHeight="61.0" prefWidth="565.0" promptText="escribe aquí..." styleClass="coding-label" stylesheets="@../../../src/styles.css" visible="false">
          <font>
             <Font size="32.0" />
          </font>
       </TextField>
-      <TextField layoutX="496.0" layoutY="345.0" prefHeight="61.0" prefWidth="565.0">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </TextField>
-      <ImageView fitHeight="68.0" fitWidth="61.0" layoutX="361.0" layoutY="345.0" preserveRatio="true">
+      <ImageView fitHeight="68.0" fitWidth="61.0" layoutX="366.0" layoutY="227.0" preserveRatio="true">
          <image>
             <Image url="@../../../src/05b_ninjaCoder_Escena_5B_reloj.png" />
          </image>
@@ -109,5 +105,20 @@
             <Image url="@../../../src/05a_ninjaCoder_Escena_5_mision_personaje_3_3.png" />
          </image>
       </ImageView>
+      <Label fx:id="palabraMostrar5c" layoutX="496.0" layoutY="226.0" prefHeight="61.0" prefWidth="565.0" styleClass="coding-label" stylesheets="@../../../src/styles.css" text="Ordena la palabra" />
+      <Pane layoutX="378.0" layoutY="359.0" prefHeight="34.0" prefWidth="38.0">
+         <children>
+            <ImageView fx:id="ok5c" fitHeight="34.0" fitWidth="38.0" visible="false">
+               <image>
+                  <Image url="@../../../src/05_ninjaCoder_Escena_5_ok.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="noOk5c" fitHeight="34.0" fitWidth="38.0" visible="false">
+               <image>
+                  <Image url="@../../../src/05_ninjaCoder_Escena_5_no_ok.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
