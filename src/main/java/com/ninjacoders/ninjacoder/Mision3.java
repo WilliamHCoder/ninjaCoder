@@ -4,6 +4,7 @@
  */
 package com.ninjacoders.ninjacoder;
 import java.util.ArrayList;
+import javafx.scene.control.Label;
 
 /**
 * Clase Mision3
@@ -21,6 +22,10 @@ public class Mision3 extends Mision{
         super(tiempoInicial);
         this.listaPalabras = listaPalabras;
         this.misionId = misionId;
+    }
+
+    Mision3(int i, String ordenada) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     // métodos getter and setter
@@ -45,6 +50,16 @@ public class Mision3 extends Mision{
     public void desordenarPalabra(){
 
     }
+
+    void verificarPalabra(String palabraIngresada) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    void iniciarMision(Label tiempo5c) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    
     
     
 }
