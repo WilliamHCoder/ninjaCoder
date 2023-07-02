@@ -70,10 +70,11 @@ public class Escena05bController extends Mision{
         //se crea  la lista y se brinda la palabra aleatoria a memorizar    
         mision.temporizador(tiempo5b, Cadena1, textCadena);
         List<String> listAleatoria = new ArrayList<String> ();
-        listAleatoria.add("jose");
-        listAleatoria.add("pedro");
-        listAleatoria.add("mariana");
-        listAleatoria.add("juan");
+        listAleatoria.add("System.out.println();");
+        listAleatoria.add("public class Escena05bController extends Mision");
+        listAleatoria.add("import java.util.ArrayList;");
+        listAleatoria.add("import java.util.Scanner;");
+        listAleatoria.add("String variable = ;");
         Collections.shuffle(listAleatoria);
         String textoAct = listAleatoria.get(0).toString();
         Cadena1.setText(textoAct);
