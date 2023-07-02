@@ -12,12 +12,11 @@ import javafx.scene.control.Label;
 /**
  * Escena07 - ¡Mision fallida!
  *
- * @author williamhernandezleon
+ * @author williamhernandezleon|juanestebanvelazquezmorera|piteralexanderbenavides
  * | Controlador que muestra si el jugador NO cumplio el puntaje minimo y la mision fue fallida.
  */
 public class Escena07Controller {
-    public Escena05aController mision1 = new Escena05aController();
-    public Mision1 mision11 = new Mision1();
+    public Mision mision = new Mision();
     public Escena02Controller escena02 = new Escena02Controller();
     public Label nickname7, puntajeAnt7, puntajeMision7, puntajeFinal7;
 
@@ -25,19 +24,25 @@ public class Escena07Controller {
     @FXML
     protected void initialize() {
         nickname7.setText(escena02.jugAct.getNickname().toString()+":");
-        if (mision11.getMisionId()==1){
-            puntajeAnt7.setText(mision1.mision.getPuntAnterior().toString());
-            puntajeMision7.setText(mision1.mision.getPuntMision().toString());
-            puntajeFinal7.setText(mision1.mision.getPuntFinal().toString());
-        }
+        puntajeAnt7.setText(mision.getPuntAnterior().toString());
+        puntajeMision7.setText(mision.getPuntMision().toString());
+        puntajeFinal7.setText(mision.getPuntFinal().toString());
     }
     
     @FXML
     private void switchToEscena() throws IOException {
-        if (mision11.getMisionId()==1){
-            App.setRoot("escena05a");
-        } else {
-            App.setRoot("escena04");
+        if (null!=mision.getMisionId())switch (mision.getMisionId()) {
+            case 1:
+                App.setRoot("escena05a");
+                break;
+            case 2:
+                App.setRoot("escena05b");
+                break;
+            case 3:
+                App.setRoot("escena05c");
+                break;
+            default:
+                break;
         }
     }
     

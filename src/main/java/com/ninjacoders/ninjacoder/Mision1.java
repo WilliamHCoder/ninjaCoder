@@ -15,14 +15,8 @@ import java.util.ArrayList;
 public class Mision1 extends Mision{
     // atributos de la misión 1
     private ArrayList condiciones;
-    private Integer misionId = 1;
-
-    // constructor
-    public Mision1(Integer puntAnterior, Integer puntMision, Integer tiempoInicial, Boolean juegoActivo) {
-        super(puntAnterior, puntMision, tiempoInicial, juegoActivo);
-        this.misionId = misionId;
-    }
     
+    // constructor    
     public Mision1(){
     }
     
@@ -33,11 +27,4 @@ public class Mision1 extends Mision{
     public void setCondiciones(ArrayList condiciones) {
         this.condiciones = condiciones;
     }
-    public Integer getMisionId() {
-        return misionId;
-    }
-    public void setMisionId(Integer misionId) {
-        this.misionId = misionId;
-    }
-
 }

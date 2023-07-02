@@ -27,8 +27,7 @@ public class Jugador {
 
     public Jugador() {
     }
-    
-    
+        
     // métodos getter y setter
     public Integer getPuntuacion() {
         return puntuacion;
@@ -53,15 +52,6 @@ public class Jugador {
     }
     public void setColorOjos(Integer colorOjos) {
         this.colorOjos = colorOjos;
-    }
-    
-    // otros métodos
-    public void ganar(){
-
-    }
-    
-    public void perder(){
-
     }
     
 }

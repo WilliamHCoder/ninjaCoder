@@ -41,7 +41,7 @@
             <Image url="@../../../src/05b_ninjaCoder_Escena_5B_num_lineas.png" />
          </image>
       </ImageView>
-      <TextField fx:id="palabraTextField3" editable="false" layoutX="496.0" layoutY="336.0" prefHeight="61.0" prefWidth="565.0" promptText="escribe aquí..." styleClass="coding-label" stylesheets="@../../../src/styles.css" visible="false">
+      <TextField fx:id="palabraTextField3" editable="false" layoutX="478.0" layoutY="336.0" prefHeight="77.0" prefWidth="586.0" promptText="escribe aquí..." styleClass="coding-label" stylesheets="@../../../src/styles.css" visible="false">
          <font>
             <Font size="32.0" />
          </font>
@@ -51,8 +51,6 @@
             <Image url="@../../../src/05b_ninjaCoder_Escena_5B_reloj.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnGanaTemp5c" layoutX="1183.0" layoutY="214.0" mnemonicParsing="false" onAction="#switchToEscena06" text="gana" />
-      <Button fx:id="btnPierdeTemp5c" layoutX="1179.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchToEscena07" text="pierde" />
       <Label fx:id="tiempo5c" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="536.0" prefHeight="116.0" prefWidth="145.0" styleClass="timer-label" stylesheets="@../../../src/styles.css" text="30" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Gill Sans" size="80.0" />

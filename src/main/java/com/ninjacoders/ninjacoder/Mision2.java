@@ -13,33 +13,29 @@ import javafx.scene.control.TextField;
 /**
 * Clase Mision2
 *
-* @author williamhernandezleon
+* @author juanestebanvelazquezmorera
 * | Clase mision2 - parametros, constructores y metodos.
 */
 public class Mision2 extends Mision{
     // atributos de la misión 2
     public String Palabracondicion;
-    public Integer misionId =2;
 
     // constructor
 
     public Mision2() {
     }
 
-    public Mision2(String Palabracondicion, Integer misionId, Integer tiempoInicial) {
+    public Mision2(String Palabracondicion, Integer tiempoInicial) {
         super(tiempoInicial);
         this.Palabracondicion = Palabracondicion;
-        this.misionId = misionId;
     }
 
-    public Mision2(String Palabracondicion, Integer misionId, Integer puntMision, Integer puntFinal, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
+    public Mision2(String Palabracondicion, Integer puntMision, Integer puntFinal, Integer tiempoInicial, Integer tiempoActivo, Boolean juegoActivo) {
         this.Palabracondicion = Palabracondicion;
-        this.misionId = misionId;
     }
 
-    public Mision2(String Palabracondicion, Integer misionId) {
+    public Mision2(String Palabracondicion) {
         this.Palabracondicion = Palabracondicion;
-        this.misionId = misionId;
     }
 
     public String getPalabracondicion() {
@@ -48,14 +44,5 @@ public class Mision2 extends Mision{
 
     public void setPalabracondicion(String Palabracondicion) {
         this.Palabracondicion = Palabracondicion;
-    }
-
-    public Integer getMisionId() {
-        return misionId;
-    }
-
-    public void setMisionId(Integer misionId) {
-        this.misionId = misionId;
-    }   
-    
+    }    
 }

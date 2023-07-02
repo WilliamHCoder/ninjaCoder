@@ -17,10 +17,9 @@ import java.io.IOException;
 /**
  * Clase Mision - Clase general para las 3 misiones
  *
- * @author williamhernandezleon
+ * @author williamhernandezleon|juanestebanvelazquezmorera|piteralexanderbenavides
  * | Clase mision - parametros y metodos comunes.
  */
-
 public class Mision {
     // atributos generales de la misión
     public static Integer puntAnterior;
@@ -29,7 +28,8 @@ public class Mision {
     public Integer tiempoInicial;
     public Integer tiempoActivo;
     public static Boolean juegoActivo = false;
-
+    private static Integer misionId = 0;
+    
     //constructor para el temporizador
     public Mision(Integer tiempoInicial) {
         this.tiempoInicial = tiempoInicial;
@@ -83,6 +83,12 @@ public class Mision {
     public void setJuegoActivo(Boolean juegoActivo) {
         this.juegoActivo = juegoActivo;
     }
+    public Integer getMisionId() {
+        return misionId;
+    }
+    public void setMisionId(Integer misionId) {
+        this.misionId = misionId;
+    }
     
     // otros métodos    
     public void cargarSonidos(){
@@ -130,65 +136,101 @@ public class Mision {
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }
     
-    /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 2**/
-    public void temporizador(Label label, Label linea1){
+    /**Método para mostrar ejecutar el primer TEMPORIZADOR en las mision 2**/
+    public void temporizador(Label label, Label linea1, TextField textJug){
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
-        int tiempoRestante = tiempoInicial;
-        @Override
-        public void run() {
-            setJuegoActivo(true);
-            if (tiempoRestante > 0) {
-                tiempoRestante--; //Disminuye en 1 seg.
-                Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
-            } else {
-                temporizador2(label,linea1);
+            int tiempoRestante = 5;
+            @Override
+            public void run() {
+                setJuegoActivo(true);
+                if (tiempoRestante > 0) {
+                    tiempoRestante--; //Disminuye en 1 seg.
+                    Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
+                } else {
+                    timer.cancel(); //Detiene el temporizador
+                    linea1.setVisible(false);
+                    temporizador2(label, textJug);
+                }
             }
-        }
         };
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }
     
-    public void temporizador2(Label label, Label linea1){
+    /**Método para mostrar ejecutar el segundo TEMPORIZADOR en las mision 2**/    
+    public void temporizador2 (Label label, TextField textJug){
+        textJug.setVisible(true);
+        Mision mision = new Mision();
+        Escena02Controller escena02 = new Escena02Controller();
         Timer timer2 = new Timer();
-        TimerTask task = new TimerTask() {
+        TimerTask task2 = new TimerTask() {
             int tiempoRestante2 = 15;
-            
             @Override
             public void run(){
-                if(tiempoRestante2 > 0){
+                if(tiempoRestante2 > 0 && juegoActivo==true){
                     tiempoRestante2--;
                     Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante2)));
-                    
-                    
                 }else{
                     timer2.cancel();
                     setJuegoActivo(false);
+                    escena02.jugAct.setPuntuacion(mision.getPuntAnterior()+mision.getPuntMision());
+                    mision.setPuntFinal(mision.getPuntAnterior()+mision.getPuntMision());
+                    //Redirecciona a las escenas de éxito o fallo         
+                    if (mision.getPuntMision()>=100){
+                        try {
+                        App.setRoot("escena06");
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    } else {
+                        try {
+                        App.setRoot("escena07");
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
                 }
                 
             }
         };
+        timer2.scheduleAtFixedRate(task2, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }
     
     /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 3**/    
     public void temporizadorMision3(Label label){
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
+        Mision mision = new Mision();
+        Escena02Controller escena02 = new Escena02Controller();
+        Timer timer3 = new Timer();
+        TimerTask task3 = new TimerTask() {
         int tiempoRestante = tiempoInicial;
         @Override
         public void run() {
-            setJuegoActivo(true);
-            if (tiempoRestante > 0) {
+            if (tiempoRestante > 0 && juegoActivo==true) {
                 tiempoRestante--; //Disminuye en 1 seg.
                 Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
             } else {
-                timer.cancel(); //Detiene el temporizador
+                timer3.cancel(); //Detiene el temporizador
                 setJuegoActivo(false);
-                
+                escena02.jugAct.setPuntuacion(mision.getPuntAnterior()+mision.getPuntMision());
+                mision.setPuntFinal(mision.getPuntAnterior()+mision.getPuntMision());
+                //Redirecciona a las escenas de éxito o fallo
+                if (mision.getPuntMision()>=100){
+                    try {
+                    App.setRoot("escena06");
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                } else {
+                    try {
+                    App.setRoot("escena07");
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
             }
         }
         };
-        timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
+        timer3.scheduleAtFixedRate(task3, 0, 1000); // Hace que se ejecute la tarea a cada segundo
     }    
     
     /**Método que HABILITA la opción de ver los INPUTS al iniciar el juego**/
@@ -212,5 +254,4 @@ public class Mision {
             }
         });
     }
-
 }

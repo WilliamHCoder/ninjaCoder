@@ -54,7 +54,7 @@ public class Escena05aController {
         puntajeMision1 = 0;
         mision.setPuntMision(0);
         mision.setPuntFinal(0);
-        coding.setMisionId(1);
+        mision.setMisionId(1);
         mision.temporizadorMision1(tiempo5a, linea1CincoA, linea2CincoA, linea3CincoA, linea4CincoA, linea5CincoA, linea6CincoA, escena02, mision);
         coding.habilitarInput(linea1CincoA, true);
         mision.addTextLimit(linea1CincoA, 20);
