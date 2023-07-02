@@ -71,10 +71,10 @@ public class Escena05bController extends Mision{
         mision.temporizador(tiempo5b, Cadena1, textCadena);
         List<String> listAleatoria = new ArrayList<String> ();
         listAleatoria.add("System.out.println();");
-        listAleatoria.add("public class Escena05bController extends Mision");
+        listAleatoria.add("public static void main(String[] args) ");
         listAleatoria.add("import java.util.ArrayList;");
         listAleatoria.add("import java.util.Scanner;");
-        listAleatoria.add("String variable = ;");
+        listAleatoria.add("int numero = 0;");
         Collections.shuffle(listAleatoria);
         String textoAct = listAleatoria.get(0).toString();
         Cadena1.setText(textoAct);
