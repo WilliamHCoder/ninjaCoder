@@ -63,7 +63,6 @@ public class Escena05bController extends Mision{
     @FXML
     void iniciarJuego(ActionEvent event) {
         btnIniciar5b.setVisible(false);
-        textCadena.setVisible(true);
         
         Mision mision = new Mision(5);
         boolean activo = mision.getJuegoActivo();
@@ -88,7 +87,13 @@ public class Escena05bController extends Mision{
         
         Cadena1.setText(textoAct);
         guardarLinea2(textCadena,textoAct);
-
+        
+        Mision Mision2 = new Mision(15);
+        
+            mision.temporizador2(Cadena1, Cadena1);
+        
+        
+        
         }
     public void guardarLinea2  (TextField lineaAct, String pal){
         
@@ -102,10 +107,13 @@ public class Escena05bController extends Mision{
                     coding2.habilitarInput(textCadena, false);
                     verificar(pal,PalabraJugador);
                     
+                    
          
                 }
             }
         });
+        
+       
     }
     //realizamos la comparacion de las palabras
     public void verificar(String palAct, String palIngr){

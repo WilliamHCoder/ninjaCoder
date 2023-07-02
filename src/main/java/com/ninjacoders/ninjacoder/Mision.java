@@ -142,11 +142,32 @@ public class Mision {
                 tiempoRestante--; //Disminuye en 1 seg.
                 Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante))); //Modifica el label con el tiempoActual
             } else {
-                
+                temporizador2(label,linea1);
             }
         }
         };
         timer.scheduleAtFixedRate(task, 0, 1000); // Hace que se ejecute la tarea a cada segundo
+    }
+    
+    public void temporizador2(Label label, Label linea1){
+        Timer timer2 = new Timer();
+        TimerTask task = new TimerTask() {
+            int tiempoRestante2 = 15;
+            
+            @Override
+            public void run(){
+                if(tiempoRestante2 > 0){
+                    tiempoRestante2--;
+                    Platform.runLater(() -> label.setText(String.valueOf(tiempoRestante2)));
+                    
+                    
+                }else{
+                    timer2.cancel();
+                    setJuegoActivo(false);
+                }
+                
+            }
+        };
     }
     
     /**Método para mostrar ejecutar el TEMPORIZADOR en las mision 3**/    
@@ -163,6 +184,7 @@ public class Mision {
             } else {
                 timer.cancel(); //Detiene el temporizador
                 setJuegoActivo(false);
+                
             }
         }
         };
