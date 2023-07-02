@@ -6,6 +6,7 @@ package com.ninjacoders.ninjacoder;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 /**
  * Escena01 - Escena inicial
@@ -14,6 +15,9 @@ import javafx.fxml.FXML;
  * | Controlador de la escena01 en donde se presenta logo y se inicia el juego.
  */
 public class Escena01Controller {
+
+    @FXML
+    private Button btnIniciar;
 
     /**
      * Initializes the controller class.

@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import com.ninjacoders.ninjacoder.App;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -41,21 +42,16 @@ public class Escena05bController extends Mision{
     public Button btnPierdeTemp5b;
     public Button btnIniciar5b;
     public ImageView pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1, pers5b_2_2, pers5b_2_3, pers5b_3_1, pers5b_3_2, pers5b_3_3;
-    public ImageView ok1;
-    public ImageView noOk1;
-    public ImageView ok11;
+    public ImageView ok2,noOk2;
     public ImageView noOk11;
     public static Integer puntajeMision2 = 0;
-    public String ListAleatoria;
-    
-    
+    public String ListAleatoria, PalabraJugador;
     @FXML
     private Button btnAtrasE05b;
     public Escena02Controller escena02 = new Escena02Controller();  
-    public Mision2 coding = new Mision2();
+    public Mision2 coding2 = new Mision2();
     
     /** se pasan caracteristicas elegidas por el jugador **/
-    @FXML
     protected void initialize(){
         
         escena02.cargarImgPersonaje(escena02.jugAct.getTonoPiel(), escena02.jugAct.getColorOjos(), pers5b_1_1, pers5b_1_2, pers5b_1_3, pers5b_2_1,
@@ -67,6 +63,7 @@ public class Escena05bController extends Mision{
     @FXML
     void iniciarJuego(ActionEvent event) {
         btnIniciar5b.setVisible(false);
+        textCadena.setVisible(true);
         
         Mision mision = new Mision(5);
         boolean activo = mision.getJuegoActivo();
@@ -74,10 +71,10 @@ public class Escena05bController extends Mision{
         puntajeMision2 = 0; 
         mision.setPuntMision(0);
         mision.setPuntFinal(0);
-        coding.setMisionId(2);
+        coding2.setMisionId(2);
     //se crea  la lista y se brinda la palabra aleatoria a memorizar    
         mision.temporizador(tiempo5b, Cadena1);
-        coding.habilitarInput(textCadena, true);
+        
         List<String> listAleatoria = new ArrayList<String> ();
         
         listAleatoria.add("jose");
@@ -85,36 +82,42 @@ public class Escena05bController extends Mision{
         listAleatoria.add("mariana");
         listAleatoria.add("juan");
         
-        int aleatoria = (int) (Math.random() * 4);
         
-        Cadena1.setText(listAleatoria.get(aleatoria));
-         
-        mision.addTextLimit(textCadena, 20);
+        Collections.shuffle(listAleatoria);
+        String textoAct = listAleatoria.get(0).toString();
         
-        for(int i=0; i < listAleatoria.size(); i++)
-            
-        guardarLinea(textCadena,  Cadena1);
-        
+        Cadena1.setText(textoAct);
+        guardarLinea2(textCadena,textoAct);
 
-        
-        
-        
         }
-    public void guardarLinea  (TextField lineaAct, Label label){
+    public void guardarLinea2  (TextField lineaAct, String pal){
         
         lineaAct.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            
+            //usamos el keyEvent para guardar la palagra ingreada por el usuario 
             @Override
             public void handle(KeyEvent event) {
                 if(event.getCode()==KeyCode.ENTER){
+                    PalabraJugador = lineaAct.getText().toString();
+                    coding2.habilitarInput(textCadena, false);
+                    verificar(pal,PalabraJugador);
                     
-                    
-                    //validamos la linea y el dato a guardar
-                    
+         
                 }
             }
         });
-        
-        
+    }
+    //realizamos la comparacion de las palabras
+    public void verificar(String palAct, String palIngr){
+        if(palAct.equals(palIngr)){
+            ok2.setVisible(true);
+            puntajeMision2 += 100;
+            System.out.println(puntajeMision2);
+            
+        }else{
+            noOk2.setVisible(true);
+            System.out.println(puntajeMision2);
+        }
     }
     
     @FXML

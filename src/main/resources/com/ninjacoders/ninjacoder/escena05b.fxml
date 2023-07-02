@@ -42,11 +42,6 @@
             <Image url="@../../../src/05b_ninjaCoder_Escena_5B_num_lineas.png" />
          </image>
       </ImageView>
-      <TextField fx:id="textCadena" layoutX="496.0" layoutY="345.0" prefHeight="61.0" prefWidth="565.0" promptText="ingresa el codigo...">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </TextField>
       <ImageView fitHeight="68.0" fitWidth="61.0" layoutX="367.0" layoutY="230.0" preserveRatio="true">
          <image>
             <Image url="@../../../src/05b_ninjaCoder_Escena_5B_reloj.png" />
@@ -107,12 +102,12 @@
       </ImageView>
       <Pane layoutX="379.0" layoutY="359.0" prefHeight="34.0" prefWidth="38.0">
          <children>
-            <ImageView fx:id="ok1" fitHeight="34.0" fitWidth="38.0" visible="false">
+            <ImageView fx:id="ok2" fitHeight="34.0" fitWidth="38.0" visible="false">
                <image>
                   <Image url="@../../../src/05_ninjaCoder_Escena_5_ok.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="noOk1" fitHeight="34.0" fitWidth="38.0" visible="false">
+            <ImageView fx:id="noOk2" fitHeight="34.0" fitWidth="38.0" visible="false">
                <image>
                   <Image url="@../../../src/05_ninjaCoder_Escena_5_no_ok.png" />
                </image>
@@ -138,5 +133,6 @@
             <Font name="Times New Roman Bold" size="31.0" />
          </font>
       </Label>
+      <TextField fx:id="textCadena" layoutX="536.0" layoutY="345.0" prefHeight="61.0" prefWidth="431.0" promptText="Ingresa el Codigo..." visible="false" />
    </children>
 </AnchorPane>
